@@ -1,12 +1,12 @@
-import { NativeBaseProvider, Box } from "native-base";
-
+import { NativeBaseProvider, Center } from "native-base";
+import Header from "./components/Header";
 function App() {
   return (
-    <div className="wrapper">
-      <NativeBaseProvider>
-        <Box>Hello world</Box>
-      </NativeBaseProvider>
-    </div>
+    <NativeBaseProvider>
+      <Center>
+        <Header />
+      </Center>
+    </NativeBaseProvider>
   );
 }
 
