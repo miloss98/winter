@@ -1,9 +1,11 @@
-import "./App.css";
+import { NativeBaseProvider, Box } from "native-base";
 
 function App() {
   return (
     <div className="wrapper">
-      <h4> test</h4>
+      <NativeBaseProvider>
+        <Box>Hello world</Box>
+      </NativeBaseProvider>
     </div>
   );
 }
