@@ -1,4 +1,4 @@
-import { useMediaQuery, Box, HStack, Text, Link } from "native-base";
+import { useMediaQuery, HStack, Text, Link } from "native-base";
 import DropdownMenu from "./DropdownMenu";
 
 const Header = () => {
@@ -7,10 +7,8 @@ const Header = () => {
   });
   return (
     <>
-      <Box safeAreaTop />
       {isSmallScreen ? (
         <HStack
-          position="relative"
           bg="gray.800"
           justifyContent={["space-between", "space-between", "space-around"]}
           alignItems="center"
