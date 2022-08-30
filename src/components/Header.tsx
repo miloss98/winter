@@ -10,7 +10,7 @@ const Header = () => {
       {isSmallScreen ? (
         <HStack
           bg="gray.800"
-          justifyContent={["space-between", "space-between", "space-around"]}
+          justifyContent={["space-between", "space-between", "space-evenly"]}
           alignItems="center"
           w="100%"
           h={["50px", "60px"]}
