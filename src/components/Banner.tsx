@@ -1,5 +1,5 @@
 import { banner_bg } from "../assets/index";
-import { Box, Center, Image } from "native-base";
+import { Center, Image } from "native-base";
 
 const Banner = () => {
   return (
