@@ -10,6 +10,7 @@ const Header = () => {
       <Box safeAreaTop />
       {isSmallScreen ? (
         <HStack
+          position="relative"
           bg="gray.800"
           justifyContent={["space-between", "space-between", "space-around"]}
           alignItems="center"
