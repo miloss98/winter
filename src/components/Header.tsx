@@ -7,16 +7,16 @@ const Header = () => {
       <Box safeAreaTop />
       <HStack
         bg="gray.800"
-        justifyContent="space-between"
+        justifyContent={["space-between", "space-between", "space-around"]}
         alignItems="center"
         w="100%"
-        height="100%"
+        h={["50px", "60px", "80px"]}
       >
         <Link textDecorationLine="none" href="/">
           <Text
             pl="15px"
             color="white"
-            fontSize="30"
+            fontSize={["1.2rem", "1.5rem", "2rem"]}
             fontWeight="bold"
             textTransform="uppercase"
           >
@@ -24,12 +24,12 @@ const Header = () => {
           </Text>
         </Link>
         <IconButton
-          height="50px"
-          width="50px"
+          height={["100%", "100%", "50%"]}
+          width={["50px", "60px", "50px"]}
           bg="orange.500"
           color="white"
           rounded={0}
-          icon={<Icon as={GiHamburgerMenu} size="lg" name="hamburger" />}
+          icon={<Icon as={GiHamburgerMenu} name="hamburger" />}
         />
       </HStack>
     </>
