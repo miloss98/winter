@@ -1,5 +1,6 @@
-import { useMediaQuery, HStack, Text, Link } from "native-base";
+import { useMediaQuery, HStack, Text, Link, Image } from "native-base";
 import DropdownMenu from "./DropdownMenu";
+import { logo } from "./../assets/index";
 
 const Header = () => {
   const [isSmallScreen] = useMediaQuery({
@@ -36,16 +37,21 @@ const Header = () => {
           w="100%"
           h="80px"
         >
-          <Link textDecorationLine="none" href="/">
-            <Text
-              pl="15px"
-              color="white"
-              fontSize="2rem"
-              fontWeight="bold"
-              textTransform="uppercase"
-            >
-              Winter
-            </Text>
+          <Link
+            height="100%"
+            width="10%"
+            textDecorationLine="none"
+            href="/"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Image
+              resizeMode="contain"
+              source={{ uri: logo }}
+              alt="Alternate Text"
+              width="100%"
+              height="55%"
+            />
           </Link>
           <HStack>
             <Link textDecorationLine="none" href="/">

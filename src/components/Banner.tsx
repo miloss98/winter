@@ -1,6 +1,5 @@
 import { banner_bg } from "../assets/index";
 import {
-  Center,
   Image,
   Box,
   Text,

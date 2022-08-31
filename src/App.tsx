@@ -5,7 +5,7 @@ import Banner from "./components/Banner";
 function App() {
   return (
     <NativeBaseProvider>
-      <Center w="100vw" height="100vh" justifyContent="flex-start">
+      <Center w="100%" h="100%" justifyContent="flex-start">
         <Header />
         <Banner />
       </Center>

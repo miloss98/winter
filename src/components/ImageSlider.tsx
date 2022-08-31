@@ -1,3 +1,4 @@
+//swiper library
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, EffectFade } from "swiper";
@@ -5,8 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "../index.css";
 //nativebase
-import { Box, Image } from "native-base";
-import { banner_bg } from "../assets";
+import { Image } from "native-base";
+import { sliderimage1, sliderimage2 } from "../assets";
 
 const ImageSlider = () => {
   return (
@@ -21,7 +22,16 @@ const ImageSlider = () => {
     >
       <SwiperSlide>
         <Image
-          source={{ uri: banner_bg }}
+          source={{ uri: sliderimage1 }}
+          position="absolute"
+          alt="Alternate Text"
+          width="100%"
+          height="100%"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image
+          source={{ uri: sliderimage2 }}
           position="absolute"
           alt="Alternate Text"
           width="100%"
