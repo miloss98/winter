@@ -11,7 +11,7 @@ import { banner_bg } from "../assets";
 const ImageSlider = () => {
   return (
     <Swiper
-      style={{ height: "400px", width: "80%" }}
+      style={{ height: "100%", width: "100%" }}
       modules={[Navigation, EffectFade]}
       navigation
       effect={"fade"}

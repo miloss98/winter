@@ -30,23 +30,58 @@ const Banner = () => {
         height="80vh"
         width="80vw"
         flexDirection="row"
-        justifyContent="center"
+        justifyContent="space-evenly"
         alignItems="center"
-        bg="red.500"
-        mt="120px"
+        mt="80px"
       >
-        <HStack width="25%" mr="40px">
-          <VStack width="100%" height="100%">
-            <Text>
+        <HStack width="32%" height="80%">
+          <VStack
+            width="100%"
+            height="100%"
+            justifyContent="center"
+            alignItems="left"
+          >
+            <Box width="100%">
+              <Text
+                textTransform="uppercase"
+                fontWeight="extrabold"
+                color="white"
+                fontSize="3xl"
+              >
+                Winter
+              </Text>
+              <Text
+                textTransform="uppercase"
+                color="orange.500"
+                fontSize="2xl"
+                fontWeight="extrabold"
+              >
+                The coldest season
+              </Text>
+            </Box>
+            <Text italic fontSize="md" color="white" pt="20px" pb="25px">
               Winter is often defined by meteorologists to be the three calendar
               months with the lowest average temperatures. This corresponds to
               the months of December, January and February in the Northern
               Hemisphere, and June, July and August in the Southern Hemisphere.
             </Text>
-            <Button> Read more</Button>
+
+            <Button
+              width="50%"
+              variant="outline"
+              borderRadius="none"
+              size="md"
+              _text={{ color: "white" }}
+              _hover={{
+                bgColor: "orange.500",
+                borderColor: "orange.500",
+              }}
+            >
+              Read more
+            </Button>
           </VStack>
         </HStack>
-        <HStack width="65%">
+        <HStack bg="yellow.900" width="60%" height="80%">
           <VStack width="100%" height="100%">
             <ImageSlider />
           </VStack>
