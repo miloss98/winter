@@ -10,14 +10,16 @@ const Header = () => {
     <>
       {isSmallScreen ? (
         <HStack
-          bg="gray.800"
-          justifyContent={["space-between", "space-between"]}
+          position="fixed"
+          zIndex="9"
+          background="rgba(0,0,0,0.5)"
+          justifyContent="space-between"
           alignItems="center"
           w="100%"
           h={["50px", "60px"]}
         >
           <Link
-            ml={["15px", "25px"]}
+            ml={["20px", "25px"]}
             height="100%"
             width={["30%", "30%"]}
             textDecorationLine="none"
@@ -30,7 +32,7 @@ const Header = () => {
               source={{ uri: logo }}
               alt="Alternate Text"
               width="100%"
-              height={["80%", "80%"]}
+              height={["60%", "80%"]}
             />
           </Link>
           <DropdownMenu />

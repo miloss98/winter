@@ -19,6 +19,7 @@ const Banner = () => {
       alignItems="center"
     >
       <Image
+        resizeMode="cover"
         source={{ uri: banner_bg }}
         position="absolute"
         alt="Alternate Text"
@@ -26,14 +27,14 @@ const Banner = () => {
         height="100%"
       />
       <Container
-        height={["80vh"]}
-        width="80vw"
-        flexDirection="row"
-        justifyContent="space-evenly"
+        height={["100vh", "80vh", "80vh"]}
+        width={["100vw", "100vw", "80vw"]}
+        flexDirection={["column", "row", "row"]}
+        justifyContent={["space-evenly", "center", "space-evenly"]}
         alignItems="center"
-        mt="120px"
+        mt={["15px", "50px", "120px"]}
       >
-        <HStack width="32%" height="80%">
+        <HStack width={["100%", "100%", "32%"]} height={["45%", "70%", "80%"]}>
           <VStack
             width="100%"
             height="100%"
@@ -45,20 +46,26 @@ const Banner = () => {
                 textTransform="uppercase"
                 fontWeight="extrabold"
                 color="white"
-                fontSize="3xl"
+                fontSize={["xl", "2xl", "3xl"]}
               >
                 Winter
               </Text>
               <Text
                 textTransform="uppercase"
                 color="orange.500"
-                fontSize="2xl"
+                fontSize={["lg", "xl", "3xl"]}
                 fontWeight="extrabold"
               >
                 The coldest season
               </Text>
             </Box>
-            <Text italic fontSize="md" color="white" pt="20px" pb="25px">
+            <Text
+              italic
+              fontWeight={["bold", "normal", "normal"]}
+              fontSize={["sm", "lg", "xl"]}
+              color="white"
+              py={["15px", "15px", "20px"]}
+            >
               Winter is often defined by meteorologists to be the three calendar
               months with the lowest average temperatures. This corresponds to
               the months of December, January and February in the Northern
@@ -66,11 +73,11 @@ const Banner = () => {
             </Text>
 
             <Button
-              width="50%"
+              width={["100%", "100%", "50%"]}
               variant="outline"
               borderRadius="none"
-              size="md"
-              _text={{ color: "white" }}
+              size={["sm", "lg", "lg"]}
+              _text={{ color: "white", fontSize: "sm" }}
               _hover={{
                 bgColor: "orange.500",
                 borderColor: "orange.500",
@@ -80,7 +87,7 @@ const Banner = () => {
             </Button>
           </VStack>
         </HStack>
-        <HStack width="60%" height="80%">
+        <HStack width={["100%", "80%", "60%"]} height={["45%", "60%", "80%"]}>
           <VStack width="100%" height="100%">
             <ImageSlider />
           </VStack>
