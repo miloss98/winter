@@ -31,7 +31,7 @@ const Banner = () => {
         flexDirection="row"
         justifyContent="space-evenly"
         alignItems="center"
-        mt="80px"
+        mt="120px"
       >
         <HStack width="32%" height="80%">
           <VStack
