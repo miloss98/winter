@@ -37,9 +37,7 @@ const Header = () => {
         </HStack>
       ) : (
         <HStack
-          position="absolute"
-          top="0"
-          left="0"
+          position="fixed"
           zIndex="9"
           background="rgba(0,0,0,0.5)"
           justifyContent="space-around"
