@@ -30,11 +30,11 @@ const Banner = () => {
         height={["100vh", "80vh", "80vh"]}
         width={["100vw", "100vw", "80vw"]}
         flexDirection={["column", "row", "row"]}
-        justifyContent={["space-evenly", "center", "space-evenly"]}
+        justifyContent={["space-evenly", "space-evenly", "space-evenly"]}
         alignItems="center"
         mt={["15px", "50px", "120px"]}
       >
-        <HStack width={["100%", "100%", "32%"]} height={["45%", "70%", "80%"]}>
+        <HStack width={["100%", "40%", "32%"]} height={["45%", "60%", "80%"]}>
           <VStack
             width="100%"
             height="100%"
@@ -53,7 +53,7 @@ const Banner = () => {
               <Text
                 textTransform="uppercase"
                 color="orange.500"
-                fontSize={["lg", "xl", "3xl"]}
+                fontSize={["lg", "lg", "3xl"]}
                 fontWeight="extrabold"
               >
                 The coldest season
@@ -62,7 +62,7 @@ const Banner = () => {
             <Text
               italic
               fontWeight={["bold", "normal", "normal"]}
-              fontSize={["sm", "lg", "xl"]}
+              fontSize={["sm", "md", "xl"]}
               color="white"
               py={["15px", "15px", "20px"]}
             >
@@ -73,11 +73,11 @@ const Banner = () => {
             </Text>
 
             <Button
-              width={["100%", "100%", "50%"]}
+              width={["100%", "80%", "50%"]}
               variant="outline"
               borderRadius="none"
-              size={["sm", "lg", "lg"]}
-              _text={{ color: "white", fontSize: "sm" }}
+              size={["sm", "md", "lg"]}
+              _text={{ color: "white", fontSize: "md" }}
               _hover={{
                 bgColor: "orange.500",
                 borderColor: "orange.500",
@@ -87,7 +87,7 @@ const Banner = () => {
             </Button>
           </VStack>
         </HStack>
-        <HStack width={["100%", "80%", "60%"]} height={["45%", "60%", "80%"]}>
+        <HStack width={["100%", "75%", "60%"]} height={["45%", "60%", "80%"]}>
           <VStack width="100%" height="100%">
             <ImageSlider />
           </VStack>

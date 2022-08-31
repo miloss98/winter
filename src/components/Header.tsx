@@ -16,12 +16,12 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
           w="100%"
-          h={["50px", "60px"]}
+          h={["50px", "70px"]}
         >
           <Link
-            ml={["20px", "25px"]}
+            ml={["25px", "25px"]}
             height="100%"
-            width={["30%", "30%"]}
+            width={["20%", "10%"]}
             textDecorationLine="none"
             href="/"
             justifyContent="center"
