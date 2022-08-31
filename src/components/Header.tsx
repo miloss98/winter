@@ -11,7 +11,7 @@ const Header = () => {
       {isSmallScreen ? (
         <HStack
           bg="gray.800"
-          justifyContent={["space-between", "space-between", "space-evenly"]}
+          justifyContent={["space-between", "space-between"]}
           alignItems="center"
           w="100%"
           h={["50px", "60px"]}
@@ -37,8 +37,12 @@ const Header = () => {
         </HStack>
       ) : (
         <HStack
-          bg="gray.800"
-          justifyContent={["space-between", "space-between", "space-around"]}
+          position="absolute"
+          top="0"
+          left="0"
+          zIndex="9"
+          background="rgba(0,0,0,0.5)"
+          justifyContent="space-around"
           alignItems="center"
           w="100%"
           h="80px"

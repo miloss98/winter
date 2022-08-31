@@ -26,7 +26,7 @@ const Banner = () => {
         height="100%"
       />
       <Container
-        height="80vh"
+        height={["80vh"]}
         width="80vw"
         flexDirection="row"
         justifyContent="space-evenly"

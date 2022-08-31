@@ -6,6 +6,7 @@ const DropdownMenu = () => {
         w="190"
         height="190"
         trigger={(triggerProps) => {
+          console.log(triggerProps);
           return (
             <Pressable
               justifyContent="center"
