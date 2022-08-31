@@ -16,16 +16,22 @@ const Header = () => {
           w="100%"
           h={["50px", "60px"]}
         >
-          <Link textDecorationLine="none" href="/">
-            <Text
-              pl="15px"
-              color="white"
-              fontSize={["1.5rem", "2rem"]}
-              fontWeight="bold"
-              textTransform="uppercase"
-            >
-              Winter
-            </Text>
+          <Link
+            ml={["15px", "25px"]}
+            height="100%"
+            width={["30%", "30%"]}
+            textDecorationLine="none"
+            href="/"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Image
+              resizeMode="contain"
+              source={{ uri: logo }}
+              alt="Alternate Text"
+              width="100%"
+              height={["80%", "80%"]}
+            />
           </Link>
           <DropdownMenu />
         </HStack>

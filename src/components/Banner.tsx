@@ -80,7 +80,7 @@ const Banner = () => {
             </Button>
           </VStack>
         </HStack>
-        <HStack bg="yellow.900" width="60%" height="80%">
+        <HStack width="60%" height="80%">
           <VStack width="100%" height="100%">
             <ImageSlider />
           </VStack>
