@@ -63,39 +63,64 @@ const Header = () => {
               height="55%"
             />
           </Link>
-          <HStack>
-            <Link textDecorationLine="none" href="/">
-              <Text color="white" fontSize="1.4rem" textTransform="capitalize">
+          <HStack height="100%" alignItems="center">
+            <Link
+              mr="30px"
+              justifyContent="center"
+              _text={{ color: "white" }}
+              _hover={{
+                borderBottomWidth: "3px",
+                borderBottomColor: "orange.500",
+              }}
+              textDecorationLine="none"
+              href="/"
+            >
+              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
                 About
               </Text>
             </Link>
-            <Link textDecorationLine="none" href="/">
-              <Text
-                pl="15px"
-                color="white"
-                fontSize="1.4rem"
-                textTransform="capitalize"
-              >
+            <Link
+              mr="30px"
+              justifyContent="center"
+              _text={{ color: "white" }}
+              _hover={{
+                borderBottomWidth: "3px",
+                borderBottomColor: "orange.500",
+              }}
+              textDecorationLine="none"
+              href="/"
+            >
+              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
                 Services
               </Text>
             </Link>
-            <Link textDecorationLine="none" href="/">
-              <Text
-                pl="15px"
-                color="white"
-                fontSize="1.4rem"
-                textTransform="capitalize"
-              >
+            <Link
+              mr="30px"
+              justifyContent="center"
+              _text={{ color: "white" }}
+              _hover={{
+                borderBottomWidth: "3px",
+                borderBottomColor: "orange.500",
+              }}
+              textDecorationLine="none"
+              href="/"
+            >
+              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
                 Pricing
               </Text>
             </Link>
-            <Link textDecorationLine="none" href="/">
-              <Text
-                pl="15px"
-                color="white"
-                fontSize="1.4rem"
-                textTransform="capitalize"
-              >
+            <Link
+              mr="30px"
+              justifyContent="center"
+              _text={{ color: "white" }}
+              _hover={{
+                borderBottomWidth: "3px",
+                borderBottomColor: "orange.500",
+              }}
+              textDecorationLine="none"
+              href="/"
+            >
+              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
                 Contact
               </Text>
             </Link>
