@@ -1,6 +1,5 @@
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 60px;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -11,7 +10,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 50px;
+  width: 100%;
   font-size: 2rem;
   background: orange;
   color: white;
@@ -20,9 +19,9 @@
 }
 .nav-menu {
   z-index: 9;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
-  margin-top: 20px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,9 +38,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 0px 8px 0px;
+  padding: 8px 0px 8px 25px;
   list-style: none;
-  height: 25px;
   color: white;
 }
 .nav-text a {
@@ -53,10 +51,12 @@
   display: flex;
   align-items: center;
 }
-.nav-text a:hover {
-  background-color: #1a83ff;
+.nav-text:hover {
+  background-color: #ffa500;
 }
 .nav-menu-items {
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 .navbar-toggle {

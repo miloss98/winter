@@ -16,7 +16,7 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
           w="100%"
-          h={["50px", "70px"]}
+          h={["60px", "60px"]}
         >
           <Link
             ml={["25px", "25px"]}
