@@ -1,6 +1,6 @@
 import { useMediaQuery, HStack, Text, Link, Image } from "native-base";
-import DropdownMenu from "./DropdownMenu";
 import { logo } from "./../assets/index";
+import SidebarMenu from "./SidebarMenu";
 
 const Header = () => {
   const [isSmallScreen] = useMediaQuery({
@@ -35,7 +35,7 @@ const Header = () => {
               height={["60%", "80%"]}
             />
           </Link>
-          <DropdownMenu />
+          <SidebarMenu />
         </HStack>
       ) : (
         <HStack
