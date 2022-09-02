@@ -2,6 +2,8 @@ import { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import "./navbar.css";
+//nativebase
+import { Box, Button, Icon } from "native-base";
 
 const SidebarMenu = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -10,12 +12,12 @@ const SidebarMenu = () => {
 
   return (
     <>
-      <div className="navbar">
-        <button className="menu-bars" onClick={showSidebar}>
+      <Box h="100%" display="flex" alignItems="center">
+        <Button onPress={showSidebar}>
           {sidebar ? <AiIcons.AiOutlineClose /> : <FaIcons.FaBars />}
-        </button>
-      </div>
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        </Button>
+      </Box>
+      <div className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="nav-text">
             <a href="#about"> About </a>
@@ -30,7 +32,7 @@ const SidebarMenu = () => {
             <a href="#contact"> Contact </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </>
   );
 };
