@@ -1,6 +1,6 @@
-import Header from "./Header";
-import HomeScreen from "./HomeScreen";
-import ImageSlider from "./ImageSlider";
-import SidebarMenu from "./SidebarMenu";
+import { Navbar } from "./navbar/index";
+import { Home } from "./home/index";
+import { ImageSlider } from "./slider/index";
+import { SidebarMenu } from "./sidebar/index";
 
-export { Header, HomeScreen, ImageSlider, SidebarMenu };
+export { Navbar, Home, ImageSlider, SidebarMenu };

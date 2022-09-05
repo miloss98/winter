@@ -4,12 +4,12 @@ import "swiper/css";
 import { Navigation, EffectFade } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import "../index.css";
+import "../../index.css";
 //nativebase
 import { Image } from "native-base";
-import { sliderimage1, sliderimage2 } from "../assets";
+import { sliderimage1, sliderimage2 } from "../../assets";
 
-const ImageSlider = () => {
+export const ImageSlider = () => {
   return (
     <Swiper
       style={{ height: "100%", width: "100%" }}
@@ -41,5 +41,3 @@ const ImageSlider = () => {
     </Swiper>
   );
 };
-
-export default ImageSlider;

@@ -1,5 +1,5 @@
-import { banner_bg } from "../assets/index";
-import { ImageSlider } from "../components/index";
+import { banner_bg } from "../../assets/index";
+import { ImageSlider } from "../index";
 import {
   Image,
   Box,
@@ -10,7 +10,7 @@ import {
   Button,
 } from "native-base";
 
-const HomeScreen = () => {
+export const Home = () => {
   return (
     <Box
       width="100%"
@@ -100,5 +100,3 @@ const HomeScreen = () => {
     </Box>
   );
 };
-
-export default HomeScreen;

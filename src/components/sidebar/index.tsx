@@ -1,11 +1,11 @@
 import { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import "../styles/navbar.css";
+import "../../styles/sidebar.css";
 //nativebase
 import { Box, Button } from "native-base";
 
-const SidebarMenu = () => {
+export const SidebarMenu = () => {
   const [sidebar, setSidebar] = useState<boolean>(false);
 
   const toggleSidebar = (): void => {
@@ -49,5 +49,3 @@ const SidebarMenu = () => {
     </>
   );
 };
-
-export default SidebarMenu;
