@@ -1,4 +1,4 @@
-import { Box, Container, Button, Text } from "native-base";
+import { Box, Container, Button, Text, HStack, Divider } from "native-base";
 
 export const About = () => {
   return (
@@ -19,13 +19,13 @@ export const About = () => {
         <Text fontSize="3rem" textTransform="uppercase">
           About us
         </Text>
-        <Text textAlign="center">
+        <Text width="80%" textAlign="center">
           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
           ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
           vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
           nec tellus a odio tincidunt auctor a ornare odio.
         </Text>
-        <Box mt="20px" h="2px" backgroundColor="#ff9408" w="25%"></Box>
+        <Divider w="25%" h="2px" my="20px" bgColor="#ff9408" />
       </Container>
 
       {/* Accordion */}
@@ -37,12 +37,7 @@ export const About = () => {
         bgColor="white"
         pt="60px"
       >
-        <Box
-          w="30%"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="row"
-        >
+        <HStack w="30%">
           <Button
             _hover={{
               bgColor: "orange.500",
@@ -91,25 +86,47 @@ export const About = () => {
           >
             Sponsors
           </Button>
-        </Box>
+        </HStack>
 
-        <Box
-          bgColor="white"
+        <HStack
           w="100%"
-          flexDirection="row"
           justifyContent="space-evenly"
           alignItems="center"
           height="80%"
         >
           {/* images */}
           <Box bgColor="red.500" h="80%" w="45%">
-            <Text textAlign="center">images</Text>
+            <Box></Box>
           </Box>
           {/* accordion content  */}
-          <Box bgColor="red.500" h="80%" w="45%">
-            <Text textAlign="center">paragraph</Text>
+          <Box p="10px" h="80%" w="50%">
+            <Text
+              textAlign="left"
+              color="black"
+              fontSize="2xl"
+              textTransform="uppercase"
+            >
+              Mission Mission Mission Mission
+            </Text>
+            <Text
+              textAlign="left"
+              fontSize="md"
+              textTransform="uppercase"
+              color="orange.500"
+            >
+              subheading subheading subheading subheading
+            </Text>
+            <Text mt="2rem" textAlign="left" fontSize="sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              deserunt quo mollitia in vel illo, quos dolorem nam blanditiis
+              dolores a eligendi vero iure explicabo?
+            </Text>
+            <Text mt="1rem" textAlign="left" fontSize="sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              sint fugiat fuga error! Tempore, consequatur?
+            </Text>
           </Box>
-        </Box>
+        </HStack>
       </Container>
     </Box>
   );
