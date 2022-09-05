@@ -6,10 +6,11 @@ import "../styles/navbar.css";
 import { Box, Button } from "native-base";
 
 const SidebarMenu = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState<boolean>(false);
 
-  const showSidebar = () => setSidebar(!sidebar);
-
+  const toggleSidebar = (): void => {
+    setSidebar(!sidebar);
+  };
   return (
     <>
       <Box
@@ -24,13 +25,13 @@ const SidebarMenu = () => {
           color="white"
           backgroundColor="orange.500"
           rounded="none"
-          onPress={showSidebar}
+          onPress={toggleSidebar}
         >
           {sidebar ? <AiIcons.AiOutlineClose /> : <FaIcons.FaBars />}
         </Button>
       </Box>
       <div className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-menu-items" onClick={showSidebar}>
+        <ul className="nav-menu-items" onClick={toggleSidebar}>
           <li className="nav-text">
             <a href="#about"> About </a>
           </li>
