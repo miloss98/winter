@@ -1,4 +1,5 @@
 import { banner_bg } from "../assets/index";
+import { ImageSlider } from "../components/index";
 import {
   Image,
   Box,
@@ -8,7 +9,6 @@ import {
   VStack,
   Button,
 } from "native-base";
-import ImageSlider from "./ImageSlider";
 
 const HomeScreen = () => {
   return (

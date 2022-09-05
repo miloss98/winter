@@ -1,6 +1,6 @@
 import { useMediaQuery, HStack, Text, Link, Image } from "native-base";
 import { logo } from "./../assets/index";
-import SidebarMenu from "./SidebarMenu";
+import { SidebarMenu } from "../components/index";
 
 const Header = () => {
   const [isSmallScreen] = useMediaQuery({
