@@ -6,7 +6,10 @@ import {
   HStack,
   Divider,
   Heading,
+  Center,
+  Image,
 } from "native-base";
+import { aboutimage1, aboutimage2 } from "../../assets/index";
 
 export const About = () => {
   return (
@@ -14,7 +17,7 @@ export const About = () => {
       w="100vw"
       justifyContent="flex-start"
       alignItems="center"
-      bgColor="red.500"
+      bgColor="whitex"
     >
       {/* Info */}
       <Container
@@ -43,7 +46,7 @@ export const About = () => {
 
       {/* Accordion */}
       <Container
-        h="600px"
+        h="80vh"
         w="100%"
         justifyContent="flex-start"
         alignItems="center"
@@ -108,18 +111,46 @@ export const About = () => {
           height="80%"
         >
           {/* images */}
-          <Box bgColor="red.500" h="80%" w="45%">
-            <Box></Box>
+          <Box h="80%" w="45%">
+            <Center
+              justifyContent="center"
+              alignItems="flex-start"
+              w="100%"
+              h="100%"
+            >
+              <Image
+                resizeMode="cover"
+                source={{ uri: aboutimage1 }}
+                alt="Alternate Text"
+                width="80%"
+                height="70%"
+                zIndex="999"
+                borderWidth="2px"
+                borderColor="black.500"
+              />
+              <Image
+                position="absolute"
+                right="10%"
+                top="5%"
+                resizeMode="cover"
+                source={{ uri: aboutimage2 }}
+                alt="Alternate Text"
+                width="80%"
+                height="70%"
+                borderWidth="2px"
+                borderColor="black"
+              />
+            </Center>
           </Box>
           {/* accordion content  */}
-          <Box p="10px" h="80%" w="50%">
+          <Box p="10px" h="80%" w="55%">
             <Heading
               size="lg"
               fontWeight="400"
               textAlign="left"
               textTransform="uppercase"
             >
-              Mission Mission Mission Mission
+              Mission Mission Mission
             </Heading>
             <Heading
               fontWeight="400"
@@ -130,14 +161,17 @@ export const About = () => {
             >
               subheading subheading subheading subheading
             </Heading>
-            <Text mt="2rem" textAlign="left" fontSize="sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              deserunt quo mollitia in vel illo, quos dolorem nam blanditiis
-              dolores a eligendi vero iure explicabo?
+            <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
+              officia voluptate veritatis amet voluptatum aliquam et hic earum
+              dolores? Fugit esse aliquid dignissimos commodi molestiae.
             </Text>
-            <Text mt="1rem" textAlign="left" fontSize="sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-              sint fugiat fuga error! Tempore, consequatur?
+            <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam,
+              sapiente, inventore dolorum autem rerum, optio odio neque impedit
+              architecto maiores temporibus deleniti iusto. Aspernatur, porro?
+              Fugiat quas, labore nostrum quis temporibus ut eligendi,
+              reiciendis error culpa quam optio numquam dolore?
             </Text>
           </Box>
         </HStack>
