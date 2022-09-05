@@ -8,6 +8,7 @@ import {
   HStack,
   VStack,
   Button,
+  Heading,
 } from "native-base";
 
 export const Home = () => {
@@ -45,22 +46,22 @@ export const Home = () => {
             alignItems="left"
           >
             <Box width="100%">
-              <Text
+              <Heading
                 textTransform="uppercase"
                 fontWeight="extrabold"
                 color="white"
                 fontSize={["xl", "2xl", "2xl", "3xl"]}
               >
                 Winter
-              </Text>
-              <Text
+              </Heading>
+              <Heading
                 textTransform="uppercase"
                 color="orange.500"
                 fontSize={["lg", "lg", "xl", "2xl"]}
                 fontWeight="extrabold"
               >
                 The coldest season
-              </Text>
+              </Heading>
             </Box>
             <Text
               italic

@@ -1,4 +1,12 @@
-import { Box, Container, Button, Text, HStack, Divider } from "native-base";
+import {
+  Box,
+  Container,
+  Button,
+  Text,
+  HStack,
+  Divider,
+  Heading,
+} from "native-base";
 
 export const About = () => {
   return (
@@ -16,9 +24,14 @@ export const About = () => {
         justifyContent="space-around"
         alignItems="center"
       >
-        <Text fontSize="3rem" textTransform="uppercase">
+        <Heading
+          pb="1rem"
+          fontWeight="500"
+          fontSize="3rem"
+          textTransform="uppercase"
+        >
           About us
-        </Text>
+        </Heading>
         <Text width="80%" textAlign="center">
           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
           ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
@@ -100,22 +113,23 @@ export const About = () => {
           </Box>
           {/* accordion content  */}
           <Box p="10px" h="80%" w="50%">
-            <Text
+            <Heading
+              size="lg"
+              fontWeight="400"
               textAlign="left"
-              color="black"
-              fontSize="2xl"
               textTransform="uppercase"
             >
               Mission Mission Mission Mission
-            </Text>
-            <Text
+            </Heading>
+            <Heading
+              fontWeight="400"
               textAlign="left"
-              fontSize="md"
+              size="sm"
               textTransform="uppercase"
               color="orange.500"
             >
               subheading subheading subheading subheading
-            </Text>
+            </Heading>
             <Text mt="2rem" textAlign="left" fontSize="sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
               deserunt quo mollitia in vel illo, quos dolorem nam blanditiis
