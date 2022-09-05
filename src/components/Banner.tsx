@@ -34,7 +34,10 @@ const Banner = () => {
         alignItems="center"
         mt={["50px", "50px", "120px"]}
       >
-        <HStack width={["100%", "40%", "32%"]} height={["45%", "60%", "80%"]}>
+        <HStack
+          width={["100%", "40%", "50%", "32%"]}
+          height={["45%", "60%", "60%", "80%"]}
+        >
           <VStack
             width="100%"
             height="100%"
@@ -46,14 +49,14 @@ const Banner = () => {
                 textTransform="uppercase"
                 fontWeight="extrabold"
                 color="white"
-                fontSize={["xl", "2xl", "3xl"]}
+                fontSize={["xl", "2xl", "2xl", "3xl"]}
               >
                 Winter
               </Text>
               <Text
                 textTransform="uppercase"
                 color="orange.500"
-                fontSize={["lg", "lg", "3xl"]}
+                fontSize={["lg", "lg", "xl", "2xl"]}
                 fontWeight="extrabold"
               >
                 The coldest season
@@ -62,7 +65,7 @@ const Banner = () => {
             <Text
               italic
               fontWeight={["bold", "normal", "normal"]}
-              fontSize={["sm", "md", "xl"]}
+              fontSize={["sm", "md", "lg"]}
               color="white"
               py={["15px", "15px", "20px"]}
             >
