@@ -1,29 +1,9 @@
-/* burger menu */
-.menu-bars-container {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.menu-bars {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  font-size: 2rem;
-  background: orange;
-  color: white;
-  outline: none;
-  border: none;
-}
 /* sidebar */
 .nav-menu {
   z-index: 9;
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;

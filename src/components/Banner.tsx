@@ -32,7 +32,7 @@ const Banner = () => {
         flexDirection={["column", "row", "row"]}
         justifyContent={["space-evenly", "space-evenly", "space-evenly"]}
         alignItems="center"
-        mt={["15px", "50px", "120px"]}
+        mt={["50px", "50px", "120px"]}
       >
         <HStack width={["100%", "40%", "32%"]} height={["45%", "60%", "80%"]}>
           <VStack
@@ -76,7 +76,8 @@ const Banner = () => {
               width={["100%", "80%", "50%"]}
               variant="outline"
               borderRadius="none"
-              size={["sm", "md", "lg"]}
+              mb={["5px", "5px", "5px"]}
+              size={["sm", "sm", "lg"]}
               _text={{ color: "white", fontSize: "md" }}
               _hover={{
                 bgColor: "orange.500",

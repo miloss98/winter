@@ -12,8 +12,20 @@ const SidebarMenu = () => {
 
   return (
     <>
-      <Box h="100%" display="flex" alignItems="center">
-        <Button onPress={showSidebar}>
+      <Box
+        h="100%"
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-end"
+      >
+        <Button
+          h="100%"
+          fontSize="1.6rem"
+          color="white"
+          backgroundColor="orange.500"
+          rounded="none"
+          onPress={showSidebar}
+        >
           {sidebar ? <AiIcons.AiOutlineClose /> : <FaIcons.FaBars />}
         </Button>
       </Box>
