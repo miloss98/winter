@@ -1,13 +1,12 @@
 import { NativeBaseProvider, Center } from "native-base";
-import Header from "./components/Header";
-import Banner from "./components/Banner";
+import { Header, HomeScreen } from "./components/index";
 
 function App() {
   return (
     <NativeBaseProvider>
       <Center w="100%" h="100%" justifyContent="flex-start">
         <Header />
-        <Banner />
+        <HomeScreen />
       </Center>
     </NativeBaseProvider>
   );

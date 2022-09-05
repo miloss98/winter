@@ -10,7 +10,7 @@ import {
 } from "native-base";
 import ImageSlider from "./ImageSlider";
 
-const Banner = () => {
+const HomeScreen = () => {
   return (
     <Box
       width="100%"
@@ -101,4 +101,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default HomeScreen;

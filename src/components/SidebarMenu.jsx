@@ -1,9 +1,9 @@
 import { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import "./navbar.css";
+import "../styles/navbar.css";
 //nativebase
-import { Box, Button, Icon } from "native-base";
+import { Box, Button } from "native-base";
 
 const SidebarMenu = () => {
   const [sidebar, setSidebar] = useState(false);
