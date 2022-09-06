@@ -16,28 +16,44 @@ interface ContentInterface {
 
 export const Accordion = (props: Props) => {
   return (
-    <Box p="10px" h="80%" w="55%" key={props.data?.[props.value]?.id}>
+    <Box
+      p={["0px", "10px", "10px", "10px"]}
+      h="80%"
+      w={["100%", "100%", "55%", "55%"]}
+      key={props.data?.[props.value]?.id}
+    >
       <Heading
-        size="lg"
-        fontWeight="400"
+        size={["sm", "md", "md", "lg"]}
+        fontWeight={["600", "600", "400", "400"]}
         textAlign="left"
         textTransform="uppercase"
       >
         {props.data?.[props.value]?.title}
       </Heading>
       <Heading
-        fontWeight="400"
+        size={["xs", "sm", "md", "lg"]}
+        fontWeight={["600", "400", "400", "400"]}
         textAlign="left"
-        size="sm"
         textTransform="uppercase"
         color="orange.500"
       >
         {props.data?.[props.value]?.heading}
       </Heading>
-      <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
+      <Text
+        color="gray.600"
+        mt={["1rem", "2rem", "1rem", "2rem"]}
+        textAlign="left"
+        fontSize={["sm", "md", "xs", "md"]}
+      >
         {props.data?.[props.value]?.content?.first}
       </Text>
-      <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
+      <Text
+        pb="20px"
+        color="gray.600"
+        mt={["1rem", "2rem", "1rem", "2rem"]}
+        textAlign="left"
+        fontSize={["sm", "md", "xs", "md"]}
+      >
         {props.data?.[props.value]?.content?.second}
       </Text>
     </Box>

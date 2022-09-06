@@ -1,3 +1,8 @@
+import { useState, useEffect } from "react";
+import { aboutimage1, aboutimage2 } from "../../assets/index";
+import { Accordion } from "./../index";
+import { accordionsData } from "../../data/accordions";
+import { buttonsData } from "../../data/buttons";
 import {
   Box,
   Container,
@@ -9,11 +14,6 @@ import {
   Center,
   Image,
 } from "native-base";
-import { aboutimage1, aboutimage2 } from "../../assets/index";
-import { useState, useEffect } from "react";
-import { Accordion } from "./../index";
-import { accordionsData } from "../../data/accordions";
-import { buttonsData } from "../../data/buttons";
 
 export const About = () => {
   interface AccordionInterface {
@@ -51,7 +51,7 @@ export const About = () => {
     >
       {/* Info */}
       <Container
-        pt="40px"
+        pt={["50px", "40px", "40px"]}
         h="35%"
         bgColor="white"
         justifyContent="space-around"
@@ -60,18 +60,28 @@ export const About = () => {
         <Heading
           pb="1rem"
           fontWeight="500"
-          fontSize="3rem"
+          fontSize={["2rem", "2rem", "2.2rem", "3rem"]}
           textTransform="uppercase"
         >
           About us
         </Heading>
-        <Text width="80%" textAlign="center">
+        <Text
+          width={["100%", "100%", "80%", "80%"]}
+          fontSize={["xs", "sm", "sm", "md"]}
+          textAlign="center"
+        >
           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
           ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
           vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
           nec tellus a odio tincidunt auctor a ornare odio.
         </Text>
-        <Divider w="25%" h="2px" my="20px" bgColor="#ff9408" />
+        <Divider
+          w={["50%", "50%", "25%", "25%"]}
+          h="2px"
+          mt="20px"
+          my={["0px", "20px", "20px", "20px"]}
+          bgColor="#ff9408"
+        />
       </Container>
 
       {/* Content */}
@@ -83,13 +93,14 @@ export const About = () => {
         bgColor="white"
         pt="60px"
       >
-        <HStack w="30%">
+        <HStack w={["100%", "60%", "60%", "40%"]}>
           {btnData?.map((button) => {
             const { id, title } = button;
             return (
               <Button
                 key={id}
                 onPress={() => setValue(id)}
+                size={["sm", "sm", "md", "lg"]}
                 _hover={{
                   bgColor: "orange.500",
                   borderColor: "orange.500",
@@ -110,12 +121,15 @@ export const About = () => {
         </HStack>
 
         <HStack
+          mt={["150px", "130px", "0px", "0px"]}
           w="100%"
+          display="flex"
+          flexDirection={["column", "column", "row", "row"]}
           justifyContent="space-evenly"
           alignItems="center"
           height="80%"
         >
-          <Box h="80%" w="45%">
+          <Box h="80%" w={["80%", "80%", "60%", "45%"]}>
             <Center
               justifyContent="center"
               alignItems="flex-start"
@@ -126,7 +140,7 @@ export const About = () => {
                 resizeMode="cover"
                 source={{ uri: aboutimage1 }}
                 alt="Alternate Text"
-                width="80%"
+                width={["100%", "80%", "80%", "80%"]}
                 height="70%"
                 zIndex="999"
                 borderWidth="2px"
@@ -134,12 +148,12 @@ export const About = () => {
               />
               <Image
                 position="absolute"
-                right="10%"
+                right={["-10%", "10%", "10%"]}
                 top="5%"
                 resizeMode="cover"
                 source={{ uri: aboutimage2 }}
                 alt="Alternate Text"
-                width="80%"
+                width={["100%", "80%", "80%", "80%"]}
                 height="70%"
                 borderWidth="2px"
                 borderColor="black"
