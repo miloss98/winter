@@ -1,17 +1,23 @@
 import { Box, Center, VStack, Text, Heading, HStack, Image } from "native-base";
 import { DividerLine } from "../divider";
-import {
-  servicesbg,
-  development_bgr,
-  design_bgr,
-  concept_bgr,
-  system_bgr,
-  development_icon,
-  design_icon,
-  concept_icon,
-  system_icon,
-} from "../../assets";
+import { useEffect, useState } from "react";
+import { servicesbg } from "./../../assets/index";
+import { cardsData } from "../../data/cards";
+
 export const Services = () => {
+  interface CardInterface {
+    id: number;
+    title: string;
+    bgr_url: string;
+    icon_url: string;
+  }
+
+  const [cardData, setCardData] = useState<CardInterface[]>([]);
+
+  useEffect(() => {
+    setCardData(cardsData);
+    console.log(cardData);
+  }, []);
   return (
     <Box w="100vw" h="100vh" justifyContent="space-evenly" bgColor="red.500">
       <Image
@@ -59,7 +65,7 @@ export const Services = () => {
             <Center h="100%" bgColor="blue.500">
               <Image
                 resizeMode="cover"
-                source={{ uri: development_bgr }}
+                source={{ uri: cardData[0]?.bgr_url }}
                 position="absolute"
                 alt="Alternate Text"
                 width="100%"
@@ -67,7 +73,7 @@ export const Services = () => {
               />
               <Image
                 resizeMode="contain"
-                source={{ uri: development_icon }}
+                source={{ uri: cardData[0]?.icon_url }}
                 position="absolute"
                 top="10%"
                 alt="Alternate Text"
@@ -81,7 +87,7 @@ export const Services = () => {
             <Center h="100%" bgColor="blue.500">
               <Image
                 resizeMode="cover"
-                source={{ uri: design_bgr }}
+                source={{ uri: cardData[0]?.bgr_url }}
                 position="absolute"
                 alt="Alternate Text"
                 width="100%"
@@ -89,7 +95,7 @@ export const Services = () => {
               />
               <Image
                 resizeMode="contain"
-                source={{ uri: design_icon }}
+                source={{ uri: cardData[0]?.icon_url }}
                 position="absolute"
                 top="10%"
                 alt="Alternate Text"
@@ -103,7 +109,7 @@ export const Services = () => {
             <Center h="100%" bgColor="blue.500">
               <Image
                 resizeMode="cover"
-                source={{ uri: concept_bgr }}
+                source={{ uri: cardData[0]?.bgr_url }}
                 position="absolute"
                 alt="Alternate Text"
                 width="100%"
@@ -111,7 +117,7 @@ export const Services = () => {
               />
               <Image
                 resizeMode="contain"
-                source={{ uri: concept_icon }}
+                source={{ uri: cardData[0]?.icon_url }}
                 position="absolute"
                 top="10%"
                 alt="Alternate Text"
@@ -125,7 +131,7 @@ export const Services = () => {
             <Center h="100%" bgColor="blue.500">
               <Image
                 resizeMode="cover"
-                source={{ uri: system_bgr }}
+                source={{ uri: cardData[0]?.bgr_url }}
                 position="absolute"
                 alt="Alternate Text"
                 width="100%"
@@ -133,7 +139,7 @@ export const Services = () => {
               />
               <Image
                 resizeMode="contain"
-                source={{ uri: system_icon }}
+                source={{ uri: cardData[0]?.icon_url }}
                 position="absolute"
                 top="10%"
                 alt="Alternate Text"
