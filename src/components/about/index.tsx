@@ -129,7 +129,7 @@ export const About = () => {
           alignItems="center"
           height="80%"
         >
-          <Box h="80%" w={["80%", "80%", "60%", "45%"]}>
+          <Box h="80%" w={["90%", "80%", "60%", "45%"]}>
             <Center
               justifyContent="center"
               alignItems="flex-start"

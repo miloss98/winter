@@ -31,7 +31,7 @@ export const Accordion = (props: Props) => {
         {props.data?.[props.value]?.title}
       </Heading>
       <Heading
-        size={["xs", "sm", "md", "lg"]}
+        size={["xs", "sm", "md", "md"]}
         fontWeight={["600", "400", "400", "400"]}
         textAlign="left"
         textTransform="uppercase"
