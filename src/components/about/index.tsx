@@ -10,8 +10,27 @@ import {
   Image,
 } from "native-base";
 import { aboutimage1, aboutimage2 } from "../../assets/index";
+import { useState, useEffect } from "react";
+// import { Accordion } from "./../index";
+import { accordionData } from "../../data/accordion";
 
 export const About = () => {
+  interface ContentInterface {
+    first: string;
+    second: string;
+  }
+
+  interface AccordionInterface {
+    title: string;
+    heading: string;
+    content: ContentInterface;
+  }
+  const [data, setData] = useState<AccordionInterface[]>();
+
+  useEffect(() => {
+    setData(accordionData);
+  }, []);
+  console.log(data);
   return (
     <Box
       w="100vw"
@@ -142,7 +161,7 @@ export const About = () => {
               />
             </Center>
           </Box>
-          {/* accordion content  */}
+          {/* single accordion item */}
           <Box p="10px" h="80%" w="55%">
             <Heading
               size="lg"
@@ -174,6 +193,7 @@ export const About = () => {
               reiciendis error culpa quam optio numquam dolore?
             </Text>
           </Box>
+          {/* <Accordion /> */}
         </HStack>
       </Container>
     </Box>
