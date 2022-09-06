@@ -1,4 +1,4 @@
-export const accordionData = [
+export const accordionsData = [
   {
     id: 0,
     title: "Mission mission mission",

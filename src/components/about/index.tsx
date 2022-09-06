@@ -11,16 +11,11 @@ import {
 } from "native-base";
 import { aboutimage1, aboutimage2 } from "../../assets/index";
 import { useState, useEffect } from "react";
-// import { Accordion } from "./../index";
-import { accordionData } from "../../data/accordion";
+import { Accordion } from "./../index";
+import { accordionsData } from "../../data/accordions";
 import { buttonsData } from "../../data/buttons";
 
 export const About = () => {
-  interface ContentInterface {
-    first: string;
-    second: string;
-  }
-
   interface AccordionInterface {
     id: number;
     title: string;
@@ -28,17 +23,22 @@ export const About = () => {
     content: ContentInterface;
   }
 
+  interface ContentInterface {
+    first: string;
+    second: string;
+  }
+
   interface ButtonInterface {
     id: number;
     title: string;
   }
 
-  const [data, setData] = useState<AccordionInterface[]>();
+  const [data, setData] = useState<AccordionInterface[]>([]);
   const [btnData, setBtnData] = useState<ButtonInterface[]>();
   const [value, setValue] = useState<number>(0);
 
   useEffect(() => {
-    setData(accordionData);
+    setData(accordionsData);
     setBtnData(buttonsData);
   }, []);
 
@@ -74,7 +74,7 @@ export const About = () => {
         <Divider w="25%" h="2px" my="20px" bgColor="#ff9408" />
       </Container>
 
-      {/* Accordion */}
+      {/* Content */}
       <Container
         h="80vh"
         w="100%"
@@ -87,26 +87,24 @@ export const About = () => {
           {btnData?.map((button) => {
             const { id, title } = button;
             return (
-              <>
-                <Button
-                  key={id}
-                  onPress={() => setValue(id)}
-                  _hover={{
-                    bgColor: "orange.500",
-                    borderColor: "orange.500",
-                    _text: {
-                      color: "white",
-                    },
-                  }}
-                  variant="outline"
-                  borderRadius="none"
-                  colorScheme="gray"
-                  textTransform="uppercase"
-                  w="33%"
-                >
-                  {title}
-                </Button>
-              </>
+              <Button
+                key={id}
+                onPress={() => setValue(id)}
+                _hover={{
+                  bgColor: "orange.500",
+                  borderColor: "orange.500",
+                  _text: {
+                    color: "white",
+                  },
+                }}
+                variant="outline"
+                borderRadius="none"
+                colorScheme="gray"
+                textTransform="uppercase"
+                w="33%"
+              >
+                {title}
+              </Button>
             );
           })}
         </HStack>
@@ -117,7 +115,6 @@ export const About = () => {
           alignItems="center"
           height="80%"
         >
-          {/* images */}
           <Box h="80%" w="45%">
             <Center
               justifyContent="center"
@@ -150,33 +147,7 @@ export const About = () => {
             </Center>
           </Box>
           {/* single accordion item */}
-          <Box p="10px" h="80%" w="55%" key={data?.[value].id}>
-            <Heading
-              size="lg"
-              fontWeight="400"
-              textAlign="left"
-              textTransform="uppercase"
-            >
-              {data?.[value].title}
-            </Heading>
-
-            <Heading
-              fontWeight="400"
-              textAlign="left"
-              size="sm"
-              textTransform="uppercase"
-              color="orange.500"
-            >
-              {data?.[value].heading}
-            </Heading>
-            <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
-              {data?.[value].content?.first}
-            </Text>
-            <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
-              {data?.[value].content?.second}
-            </Text>
-          </Box>
-          {/* <Accordion /> */}
+          <Accordion data={data} value={value} />
         </HStack>
       </Container>
     </Box>
