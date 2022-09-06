@@ -37,7 +37,7 @@ export const Home = () => {
       >
         <HStack
           width={["100%", "40%", "50%", "32%"]}
-          height={["45%", "60%", "60%", "80%"]}
+          height={["45%", "50%", "60%", "80%"]}
         >
           <VStack
             width="100%"
@@ -50,14 +50,14 @@ export const Home = () => {
                 textTransform="uppercase"
                 fontWeight="extrabold"
                 color="white"
-                fontSize={["xl", "2xl", "2xl", "3xl"]}
+                fontSize={["xl", "lg", "2xl", "3xl"]}
               >
                 Winter
               </Heading>
               <Heading
                 textTransform="uppercase"
                 color="orange.500"
-                fontSize={["lg", "lg", "xl", "2xl"]}
+                fontSize={["lg", "sm", "xl", "2xl"]}
                 fontWeight="extrabold"
               >
                 The coldest season
@@ -66,9 +66,9 @@ export const Home = () => {
             <Text
               italic
               fontWeight={["bold", "normal", "normal"]}
-              fontSize={["sm", "md", "lg"]}
+              fontSize={["sm", "sm", "md", "lg"]}
               color="white"
-              py={["15px", "15px", "20px"]}
+              py={["15px", "10px", "10px", "20px"]}
             >
               Winter is often defined by meteorologists to be the three calendar
               months with the lowest average temperatures. This corresponds to
@@ -80,9 +80,10 @@ export const Home = () => {
               width={["100%", "80%", "50%"]}
               variant="outline"
               borderRadius="none"
-              mb={["5px", "5px", "5px"]}
-              size={["sm", "sm", "lg"]}
-              _text={{ color: "white", fontSize: "md" }}
+              mb={["5px", "2px", "5px", "5px"]}
+              size={["sm", "sm", "md", "lg"]}
+              fontSize={["md", "sm", "md", "lg"]}
+              _text={{ color: "white" }}
               _hover={{
                 bgColor: "orange.500",
                 borderColor: "orange.500",
