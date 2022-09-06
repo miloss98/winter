@@ -1,8 +1,19 @@
-import { Navbar } from "./navbar/index";
-import { Home } from "./home/index";
-import { About } from "./about/index";
-import { ImageSlider } from "./slider/index";
-import { SidebarMenu } from "./sidebar/index";
-import { Accordion } from "./accordion/index";
+import { Navbar } from "./navbar";
+import { Home } from "./home";
+import { About } from "./about";
+import { Services } from "./services";
+import { ImageSlider } from "./slider";
+import { SidebarMenu } from "./sidebar";
+import { Accordion } from "./accordion";
+import { DividerLine } from "./divider";
 
-export { Navbar, Home, About, ImageSlider, SidebarMenu, Accordion };
+export {
+  Navbar,
+  Home,
+  About,
+  Services,
+  ImageSlider,
+  SidebarMenu,
+  Accordion,
+  DividerLine,
+};

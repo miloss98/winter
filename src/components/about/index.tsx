@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { aboutimage1, aboutimage2 } from "../../assets/index";
-import { Accordion } from "./../index";
+import { Accordion, DividerLine } from "./../index";
 import { accordionsData } from "../../data/accordions";
 import { buttonsData } from "../../data/buttons";
 import {
@@ -9,7 +9,6 @@ import {
   Button,
   Text,
   HStack,
-  Divider,
   Heading,
   Center,
   Image,
@@ -75,13 +74,7 @@ export const About = () => {
           vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
           nec tellus a odio tincidunt auctor a ornare odio.
         </Text>
-        <Divider
-          w={["50%", "50%", "25%", "25%"]}
-          h="2px"
-          mt="20px"
-          my={["0px", "20px", "20px", "20px"]}
-          bgColor="#ff9408"
-        />
+        <DividerLine />
       </Container>
 
       {/* Content */}
