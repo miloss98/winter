@@ -1,5 +1,6 @@
 export const accordionData = [
   {
+    id: 0,
     title: "Mission mission mission",
     heading: "first subheading -- mission",
     content: {
@@ -10,6 +11,7 @@ export const accordionData = [
     },
   },
   {
+    id: 1,
     title: "Vision vision vision",
     heading: "second subheading -- vision",
     content: {
@@ -21,6 +23,7 @@ export const accordionData = [
   },
 
   {
+    id: 2,
     title: "Sponsors sponsors sponsors",
     heading: "third subheading -- sponsors",
     content: {

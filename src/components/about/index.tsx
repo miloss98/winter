@@ -13,6 +13,7 @@ import { aboutimage1, aboutimage2 } from "../../assets/index";
 import { useState, useEffect } from "react";
 // import { Accordion } from "./../index";
 import { accordionData } from "../../data/accordion";
+import { buttonsData } from "../../data/buttons";
 
 export const About = () => {
   interface ContentInterface {
@@ -21,16 +22,26 @@ export const About = () => {
   }
 
   interface AccordionInterface {
+    id: number;
     title: string;
     heading: string;
     content: ContentInterface;
   }
+
+  interface ButtonInterface {
+    id: number;
+    title: string;
+  }
+
   const [data, setData] = useState<AccordionInterface[]>();
+  const [btnData, setBtnData] = useState<ButtonInterface[]>();
+  const [value, setValue] = useState<number>(0);
 
   useEffect(() => {
     setData(accordionData);
+    setBtnData(buttonsData);
   }, []);
-  console.log(data);
+
   return (
     <Box
       w="100vw"
@@ -73,54 +84,31 @@ export const About = () => {
         pt="60px"
       >
         <HStack w="30%">
-          <Button
-            _hover={{
-              bgColor: "orange.500",
-              borderColor: "orange.500",
-              _text: {
-                color: "white",
-              },
-            }}
-            variant="outline"
-            borderRadius="none"
-            colorScheme="gray"
-            textTransform="uppercase"
-            w="33%"
-          >
-            Mission
-          </Button>
-          <Button
-            _hover={{
-              bgColor: "orange.500",
-              borderColor: "orange.500",
-              _text: {
-                color: "white",
-              },
-            }}
-            variant="outline"
-            borderRadius="none"
-            colorScheme="gray"
-            textTransform="uppercase"
-            w="33%"
-          >
-            Vision
-          </Button>
-          <Button
-            _hover={{
-              bgColor: "orange.500",
-              borderColor: "orange.500",
-              _text: {
-                color: "white",
-              },
-            }}
-            variant="outline"
-            borderRadius="none"
-            colorScheme="gray"
-            textTransform="uppercase"
-            w="33%"
-          >
-            Sponsors
-          </Button>
+          {btnData?.map((button) => {
+            const { id, title } = button;
+            return (
+              <>
+                <Button
+                  key={id}
+                  onPress={() => setValue(id)}
+                  _hover={{
+                    bgColor: "orange.500",
+                    borderColor: "orange.500",
+                    _text: {
+                      color: "white",
+                    },
+                  }}
+                  variant="outline"
+                  borderRadius="none"
+                  colorScheme="gray"
+                  textTransform="uppercase"
+                  w="33%"
+                >
+                  {title}
+                </Button>
+              </>
+            );
+          })}
         </HStack>
 
         <HStack
@@ -162,15 +150,16 @@ export const About = () => {
             </Center>
           </Box>
           {/* single accordion item */}
-          <Box p="10px" h="80%" w="55%">
+          <Box p="10px" h="80%" w="55%" key={data?.[value].id}>
             <Heading
               size="lg"
               fontWeight="400"
               textAlign="left"
               textTransform="uppercase"
             >
-              Mission Mission Mission
+              {data?.[value].title}
             </Heading>
+
             <Heading
               fontWeight="400"
               textAlign="left"
@@ -178,19 +167,13 @@ export const About = () => {
               textTransform="uppercase"
               color="orange.500"
             >
-              subheading subheading subheading subheading
+              {data?.[value].heading}
             </Heading>
             <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
-              officia voluptate veritatis amet voluptatum aliquam et hic earum
-              dolores? Fugit esse aliquid dignissimos commodi molestiae.
+              {data?.[value].content?.first}
             </Text>
             <Text color="gray.600" mt="2rem" textAlign="left" fontSize="md">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam,
-              sapiente, inventore dolorum autem rerum, optio odio neque impedit
-              architecto maiores temporibus deleniti iusto. Aspernatur, porro?
-              Fugiat quas, labore nostrum quis temporibus ut eligendi,
-              reiciendis error culpa quam optio numquam dolore?
+              {data?.[value].content?.second}
             </Text>
           </Box>
           {/* <Accordion /> */}
