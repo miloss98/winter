@@ -3,6 +3,7 @@ import { DividerLine } from "../divider";
 import { useEffect, useState } from "react";
 import { servicesbg } from "./../../assets/index";
 import { cardsData } from "../../data/cards";
+import { Card } from "../card";
 
 export const Services = () => {
   interface CardInterface {
@@ -16,7 +17,6 @@ export const Services = () => {
 
   useEffect(() => {
     setCardData(cardsData);
-    console.log(cardData);
   }, []);
   return (
     <Box w="100vw" h="100vh" justifyContent="space-evenly" bgColor="red.500">
@@ -55,101 +55,7 @@ export const Services = () => {
         </VStack>
       </HStack>
       <Center w="100%" h="80%">
-        <HStack
-          w="80%"
-          h="80%"
-          justifyContent="space-evenly"
-          alignItems="center"
-        >
-          <VStack w="22%" height="90%">
-            <Center h="100%" bgColor="blue.500">
-              <Image
-                resizeMode="cover"
-                source={{ uri: cardData[0]?.bgr_url }}
-                position="absolute"
-                alt="Alternate Text"
-                width="100%"
-                height="100%"
-              />
-              <Image
-                resizeMode="contain"
-                source={{ uri: cardData[0]?.icon_url }}
-                position="absolute"
-                top="10%"
-                alt="Alternate Text"
-                width="100%"
-                height="30%"
-              />
-              <Text zIndex="9">Development</Text>
-            </Center>
-          </VStack>
-          <VStack w="22%" height="90%">
-            <Center h="100%" bgColor="blue.500">
-              <Image
-                resizeMode="cover"
-                source={{ uri: cardData[0]?.bgr_url }}
-                position="absolute"
-                alt="Alternate Text"
-                width="100%"
-                height="100%"
-              />
-              <Image
-                resizeMode="contain"
-                source={{ uri: cardData[0]?.icon_url }}
-                position="absolute"
-                top="10%"
-                alt="Alternate Text"
-                width="100%"
-                height="30%"
-              />
-              <Text zIndex="9">Design</Text>
-            </Center>
-          </VStack>
-          <VStack w="22%" height="90%">
-            <Center h="100%" bgColor="blue.500">
-              <Image
-                resizeMode="cover"
-                source={{ uri: cardData[0]?.bgr_url }}
-                position="absolute"
-                alt="Alternate Text"
-                width="100%"
-                height="100%"
-              />
-              <Image
-                resizeMode="contain"
-                source={{ uri: cardData[0]?.icon_url }}
-                position="absolute"
-                top="10%"
-                alt="Alternate Text"
-                width="100%"
-                height="30%"
-              />
-              <Text zIndex="9">Concept</Text>
-            </Center>
-          </VStack>
-          <VStack w="22%" height="90%">
-            <Center h="100%" bgColor="blue.500">
-              <Image
-                resizeMode="cover"
-                source={{ uri: cardData[0]?.bgr_url }}
-                position="absolute"
-                alt="Alternate Text"
-                width="100%"
-                height="100%"
-              />
-              <Image
-                resizeMode="contain"
-                source={{ uri: cardData[0]?.icon_url }}
-                position="absolute"
-                top="10%"
-                alt="Alternate Text"
-                width="100%"
-                height="30%"
-              />
-              <Text zIndex="9">System</Text>
-            </Center>
-          </VStack>
-        </HStack>
+        <Card cardData={cardData} />
       </Center>
     </Box>
   );

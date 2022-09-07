@@ -6,6 +6,7 @@ import { ImageSlider } from "./slider";
 import { SidebarMenu } from "./sidebar";
 import { Accordion } from "./accordion";
 import { DividerLine } from "./divider";
+import { Card } from "./card";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   SidebarMenu,
   Accordion,
   DividerLine,
+  Card,
 };
