@@ -92,14 +92,25 @@ export const About = () => {
             return (
               <Button
                 key={id}
-                onPress={() => setValue(id)}
+                onPress={() => {
+                  setValue(id);
+                }}
                 size={["sm", "sm", "md", "lg"]}
                 _hover={{
-                  bgColor: "orange.500",
-                  borderColor: "orange.500",
+                  bgColor: "orange.400",
+                  borderColor: "orange.400",
                   _text: {
                     color: "white",
                   },
+                }}
+                _focus={{
+                  _text: {
+                    color: "white",
+                  },
+                  _hover: {
+                    bgColor: "orange.500",
+                  },
+                  bgColor: "orange.500",
                 }}
                 variant="outline"
                 borderRadius="none"
