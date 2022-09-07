@@ -20,7 +20,13 @@ export const Services = () => {
   }, []);
   return (
     <div id="services">
-      <Box w="100vw" h="100vh" justifyContent="space-evenly" bgColor="red.500">
+      <Box
+        mt="80px"
+        w="100vw"
+        h="100vh"
+        justifyContent="space-evenly"
+        bgColor="red.500"
+      >
         <Image
           resizeMode="cover"
           source={{ uri: servicesbg }}

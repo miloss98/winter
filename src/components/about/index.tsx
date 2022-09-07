@@ -44,6 +44,7 @@ export const About = () => {
   return (
     <div id="about">
       <Box
+        mt="50px"
         w="100vw"
         justifyContent="flex-start"
         alignItems="center"
