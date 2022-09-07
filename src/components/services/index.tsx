@@ -21,11 +21,10 @@ export const Services = () => {
   return (
     <div id="services">
       <Box
-        mt="80px"
+        mt={["0px", "200px", "80px", "80px"]}
         w="100vw"
         h="100vh"
-        justifyContent="space-evenly"
-        bgColor="red.500"
+        justifyContent="flex-start"
       >
         <Image
           resizeMode="cover"
@@ -39,7 +38,7 @@ export const Services = () => {
           <VStack h="100%" w="100%" justifyContent="center" alignItems="center">
             <Heading
               pb="1rem"
-              mt="70px"
+              mt={["100px", "0px", "0px", "0px"]}
               fontWeight="500"
               fontSize={["2rem", "2rem", "2.2rem", "3rem"]}
               textTransform="uppercase"

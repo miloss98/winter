@@ -45,6 +45,7 @@ export const About = () => {
     <div id="about">
       <Box
         mt="50px"
+        mb={["300px", "0px", "0px", "0px"]}
         w="100vw"
         justifyContent="flex-start"
         alignItems="center"
