@@ -1,11 +1,25 @@
 import { useMediaQuery, HStack, Text, Link, Image } from "native-base";
 import { logo } from "../../assets/index";
 import { SidebarMenu } from "../index";
+import { useState, useEffect } from "react";
+import { linksData } from "../../data/links";
+
+interface LinksInterface {
+  id: number;
+  title: string;
+  href: string;
+}
 
 export const Navbar = () => {
   const [isSmallScreen] = useMediaQuery({
     maxWidth: 768,
   });
+  const [links, setLinks] = useState<LinksInterface[]>([]);
+
+  useEffect(() => {
+    setLinks(linksData);
+  }, []);
+
   return (
     <>
       {isSmallScreen ? (
@@ -64,66 +78,31 @@ export const Navbar = () => {
             />
           </Link>
           <HStack height="100%" alignItems="center">
-            <Link
-              mr="30px"
-              justifyContent="center"
-              _text={{ color: "white" }}
-              _hover={{
-                borderBottomWidth: "3px",
-                borderBottomColor: "orange.500",
-              }}
-              textDecorationLine="none"
-              href="/"
-            >
-              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
-                About
-              </Text>
-            </Link>
-            <Link
-              mr="30px"
-              justifyContent="center"
-              _text={{ color: "white" }}
-              _hover={{
-                borderBottomWidth: "3px",
-                borderBottomColor: "orange.500",
-              }}
-              textDecorationLine="none"
-              href="/"
-            >
-              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
-                Services
-              </Text>
-            </Link>
-            <Link
-              mr="30px"
-              justifyContent="center"
-              _text={{ color: "white" }}
-              _hover={{
-                borderBottomWidth: "3px",
-                borderBottomColor: "orange.500",
-              }}
-              textDecorationLine="none"
-              href="/"
-            >
-              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
-                Pricing
-              </Text>
-            </Link>
-            <Link
-              mr="30px"
-              justifyContent="center"
-              _text={{ color: "white" }}
-              _hover={{
-                borderBottomWidth: "3px",
-                borderBottomColor: "orange.500",
-              }}
-              textDecorationLine="none"
-              href="/"
-            >
-              <Text color="white" fontSize="1.2rem" textTransform="capitalize">
-                Contact
-              </Text>
-            </Link>
+            {linksData.map((link) => {
+              const { id, title, href } = link;
+              return (
+                <Link
+                  key={id}
+                  mr="30px"
+                  justifyContent="center"
+                  _text={{ color: "white" }}
+                  _hover={{
+                    borderBottomWidth: "3px",
+                    borderBottomColor: "orange.500",
+                  }}
+                  textDecorationLine="none"
+                  href={href}
+                >
+                  <Text
+                    color="white"
+                    fontSize="1.2rem"
+                    textTransform="capitalize"
+                  >
+                    {title}
+                  </Text>
+                </Link>
+              );
+            })}
           </HStack>
         </HStack>
       )}
