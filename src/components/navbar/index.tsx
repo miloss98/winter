@@ -1,24 +1,11 @@
 import { useMediaQuery, HStack, Text, Link, Image } from "native-base";
 import { logo } from "../../assets/index";
-import { SidebarMenu } from "../index";
-import { useState, useEffect } from "react";
-import { linksData } from "../../data/links";
-
-interface LinksInterface {
-  id: number;
-  title: string;
-  href: string;
-}
+import { NavLinks, SidebarMenu } from "../index";
 
 export const Navbar = () => {
   const [isSmallScreen] = useMediaQuery({
     maxWidth: 768,
   });
-  const [links, setLinks] = useState<LinksInterface[]>([]);
-
-  useEffect(() => {
-    setLinks(linksData);
-  }, []);
 
   return (
     <>
@@ -77,32 +64,9 @@ export const Navbar = () => {
               height="55%"
             />
           </Link>
+          {/* nav links */}
           <HStack height="100%" alignItems="center">
-            {linksData.map((link) => {
-              const { id, title, href } = link;
-              return (
-                <Link
-                  key={id}
-                  mr="30px"
-                  justifyContent="center"
-                  _text={{ color: "white" }}
-                  _hover={{
-                    borderBottomWidth: "3px",
-                    borderBottomColor: "orange.500",
-                  }}
-                  textDecorationLine="none"
-                  href={href}
-                >
-                  <Text
-                    color="white"
-                    fontSize="1.2rem"
-                    textTransform="capitalize"
-                  >
-                    {title}
-                  </Text>
-                </Link>
-              );
-            })}
+            <NavLinks />
           </HStack>
         </HStack>
       )}
