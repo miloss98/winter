@@ -76,7 +76,15 @@ export const Services = () => {
           w="100%"
           h={["40%", "80%", "80%", "70%"]}
         >
-          <Card cardData={cardData} />
+          <HStack
+            w="80%"
+            h={["45%", "80%", "80%", "80%"]}
+            flexDirection={["column", "row", "row", "row"]}
+            justifyContent="space-evenly"
+            alignItems={["flex-start", "center", "center", "center"]}
+          >
+            <Card cardData={cardData} />
+          </HStack>
         </Center>
       </Box>
     </div>

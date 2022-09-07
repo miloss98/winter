@@ -11,13 +11,7 @@ interface CardProps {
 }
 export const Card = (props: CardProps) => {
   return (
-    <HStack
-      w="80%"
-      h={["45%", "80%", "80%", "80%"]}
-      flexDirection={["column", "row", "row", "row"]}
-      justifyContent="space-evenly"
-      alignItems={["flex-start", "center", "center", "center"]}
-    >
+    <>
       {props?.cardData.map((card) => {
         const { id, title, bgr_url, icon_url } = card;
         return (
@@ -58,6 +52,6 @@ export const Card = (props: CardProps) => {
           </VStack>
         );
       })}
-    </HStack>
+    </>
   );
 };
