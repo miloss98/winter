@@ -23,7 +23,7 @@ export const Services = () => {
       <Box
         mt={["0px", "200px", "80px", "80px"]}
         w="100vw"
-        h="100vh"
+        h={["1700px", "100vh", "100vh", "100vh"]}
         justifyContent="flex-start"
       >
         <Image
@@ -34,11 +34,22 @@ export const Services = () => {
           width="100%"
           height="100%"
         />
-        <HStack h="25%" w="100%" justifyContent="center" alignItems="center">
-          <VStack h="100%" w="100%" justifyContent="center" alignItems="center">
+        <HStack
+          h={["25%", "30%", "30%", "30%"]}
+          w="100%"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <VStack
+            pb={["250px", "0px", "0px", "0px"]}
+            h="100%"
+            w="100%"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Heading
               pb="1rem"
-              mt={["100px", "0px", "0px", "0px"]}
+              mt={["100px", "100px", "100px", "0px"]}
               fontWeight="500"
               fontSize={["2rem", "2rem", "2.2rem", "3rem"]}
               textTransform="uppercase"
@@ -48,7 +59,7 @@ export const Services = () => {
             </Heading>
             <Text
               color="white"
-              width={["100%", "100%", "80%", "80%"]}
+              width={["80%", "80%", "80%", "80%"]}
               fontSize={["xs", "sm", "sm", "md"]}
               textAlign="center"
             >
@@ -60,7 +71,11 @@ export const Services = () => {
             <DividerLine />
           </VStack>
         </HStack>
-        <Center w="100%" h="80%">
+        <Center
+          mt={["100px", "0px", "0px", "0px"]}
+          w="100%"
+          h={["40%", "80%", "80%", "70%"]}
+        >
           <Card cardData={cardData} />
         </Center>
       </Box>

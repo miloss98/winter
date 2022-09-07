@@ -6,19 +6,30 @@ interface CardInterface {
   bgr_url: string;
   icon_url: string;
 }
-interface IProps {
+interface CardProps {
   cardData: CardInterface[];
 }
-export const Card = (props: IProps) => {
+export const Card = (props: CardProps) => {
   return (
-    <HStack w="80%" h="80%" justifyContent="space-evenly" alignItems="center">
+    <HStack
+      w="80%"
+      h={["45%", "80%", "80%", "80%"]}
+      flexDirection={["column", "row", "row", "row"]}
+      justifyContent="space-evenly"
+      alignItems={["flex-start", "center", "center", "center"]}
+    >
       {props?.cardData.map((card) => {
         const { id, title, bgr_url, icon_url } = card;
         return (
-          <VStack key={id} w="22%" height="90%">
-            <Center h="100%" bgColor="blue.500">
+          <VStack
+            key={id}
+            w={["100%", "22%", "22%", "22%"]}
+            height={["100%", "90%", "90%", "90%"]}
+            marginTop={["20px", "0px", "0px", "0px"]}
+          >
+            <Center h="100%">
               <Image
-                resizeMode="cover"
+                resizeMode="contain"
                 source={{ uri: bgr_url }}
                 position="absolute"
                 alt="Alternate Text"
@@ -29,12 +40,20 @@ export const Card = (props: IProps) => {
                 resizeMode="contain"
                 source={{ uri: icon_url }}
                 position="absolute"
-                top="10%"
+                top={["20%", "30%", "30%", "10%"]}
                 alt="Alternate Text"
                 width="100%"
-                height="30%"
+                height={["30%", "10%", "10%", "30%"]}
               />
-              <Text zIndex="9">{title}</Text>
+              <Text
+                mt={["50px", "0px", "0px", "0px"]}
+                zIndex="9"
+                color="white"
+                textTransform="uppercase"
+                fontWeight="600"
+              >
+                {title}
+              </Text>
             </Center>
           </VStack>
         );
