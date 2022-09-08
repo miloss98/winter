@@ -1,9 +1,8 @@
 import { Box, Center, VStack, Text, Heading, HStack, Image } from "native-base";
-import { DividerLine } from "../divider";
 import { useEffect, useState } from "react";
+import { DividerLine, Card } from "../../components/index";
 import { servicesbg } from "./../../assets/index";
 import { cardsData } from "../../data/cards";
-import { Card } from "../card";
 
 export const Services = () => {
   interface CardInterface {

@@ -1,12 +1,12 @@
+import { Image } from "native-base";
+import "../../index.css";
 //swiper library
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Navigation, EffectFade } from "swiper";
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import "../../index.css";
-//nativebase
-import { Image } from "native-base";
+//assets
 import { sliderimage1, sliderimage2 } from "../../assets";
 
 export const ImageSlider = () => {

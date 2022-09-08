@@ -1,8 +1,3 @@
-import { useState, useEffect } from "react";
-import { aboutimage1, aboutimage2 } from "../../assets/index";
-import { Accordion, DividerLine } from "./../index";
-import { accordionsData } from "../../data/accordions";
-import { buttonsData } from "../../data/buttons";
 import {
   Box,
   Container,
@@ -13,25 +8,29 @@ import {
   Center,
   Image,
 } from "native-base";
+import { useState, useEffect } from "react";
+import { aboutimage1, aboutimage2 } from "../../assets/index";
+import { Accordion, DividerLine } from "./../index";
+import { accordionsData, buttonsData } from "../../data/index";
+
+interface AccordionInterface {
+  id: number;
+  title: string;
+  heading: string;
+  content: ContentInterface;
+}
+
+interface ContentInterface {
+  first: string;
+  second: string;
+}
+
+interface ButtonInterface {
+  id: number;
+  title: string;
+}
 
 export const About = () => {
-  interface AccordionInterface {
-    id: number;
-    title: string;
-    heading: string;
-    content: ContentInterface;
-  }
-
-  interface ContentInterface {
-    first: string;
-    second: string;
-  }
-
-  interface ButtonInterface {
-    id: number;
-    title: string;
-  }
-
   const [data, setData] = useState<AccordionInterface[]>([]);
   const [btnData, setBtnData] = useState<ButtonInterface[]>();
   const [value, setValue] = useState<number>(0);

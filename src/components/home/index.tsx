@@ -1,5 +1,3 @@
-import { banner_bg } from "../../assets/index";
-import { ImageSlider } from "../index";
 import {
   Image,
   Box,
@@ -10,6 +8,8 @@ import {
   Button,
   Heading,
 } from "native-base";
+import { banner_bg } from "../../assets/index";
+import { ImageSlider } from "../index";
 
 export const Home = () => {
   return (

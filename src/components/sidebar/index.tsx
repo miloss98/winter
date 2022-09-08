@@ -1,10 +1,9 @@
+import { Box, Button, Link } from "native-base";
 import { useEffect, useState } from "react";
+import { linksData } from "../../data/index";
+import "../../styles/sidebar.css";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import "../../styles/sidebar.css";
-//nativebase
-import { Box, Button, Link } from "native-base";
-import { linksData } from "../../data/links";
 
 interface LinksInterface {
   id: number;

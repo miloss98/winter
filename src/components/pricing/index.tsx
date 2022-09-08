@@ -1,8 +1,7 @@
 import { Center, Box, Container, Text, Heading } from "native-base";
 import { useEffect, useState } from "react";
-import { DividerLine } from "../divider";
-import { Packages } from "../packages";
-import { packagesData } from "../../data/packages";
+import { DividerLine, Packages } from "../../components/index";
+import { packagesData } from "../../data/index";
 
 interface PricesInterface {
   id: number;

@@ -1,4 +1,5 @@
 import { Box, Heading, Text } from "native-base";
+
 interface Props {
   data: AccordionInterface[];
   value: number;

@@ -13,6 +13,7 @@ import development_icon from "./images/development_icon.png";
 import design_icon from "./images/design_icon.png";
 import concept_icon from "./images/concept_icon.png";
 import system_icon from "./images/system_icon.png";
+import contact_bgr from "./images/contact_bgr.jpg";
 
 export {
   logo,
@@ -30,4 +31,5 @@ export {
   design_icon,
   concept_icon,
   system_icon,
+  contact_bgr,
 };

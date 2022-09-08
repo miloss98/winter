@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
-import { linksData } from "../../data/links";
 import { Link } from "native-base";
+import { useState, useEffect } from "react";
+import { linksData } from "../../data/index";
+
 interface LinksInterface {
   id: number;
   title: string;
