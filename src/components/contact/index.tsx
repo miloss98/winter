@@ -1,4 +1,4 @@
-import { Container, Box, Image, Text, Heading, HStack } from "native-base";
+import { Container, Box, Image, Text, Heading } from "native-base";
 import { DividerLine, Form, Info } from "../index";
 import { contact_bgr } from "../../assets";
 
@@ -43,10 +43,15 @@ export const Contact = () => {
           <DividerLine />
         </Container>
 
-        <HStack w="100%" h="500px" alignItems="center" justifyContent="center">
+        <Container
+          w={["100%", "100%"]}
+          alignItems="center"
+          justifyContent="space-evenly"
+          flexDirection="column"
+        >
           <Form />
           <Info />
-        </HStack>
+        </Container>
       </Box>
     </div>
   );

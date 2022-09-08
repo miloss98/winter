@@ -1,7 +1,7 @@
 import { Box, Text } from "native-base";
 export const Info = () => {
   return (
-    <Box w="40%" bgColor="red.500" h="80%">
+    <Box w="100%" bgColor="red.500" h="300px">
       <Text> hello</Text>
     </Box>
   );
