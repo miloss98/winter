@@ -49,7 +49,7 @@ export const Services = () => {
           >
             <Heading
               pb="1rem"
-              mt={["100px", "100px", "100px", "0px"]}
+              mt={["120px", "100px", "100px", "0px"]}
               fontWeight="500"
               fontSize={["2rem", "2rem", "2.2rem", "3rem"]}
               textTransform="uppercase"
@@ -72,7 +72,7 @@ export const Services = () => {
           </VStack>
         </HStack>
         <Center
-          mt={["100px", "0px", "0px", "0px"]}
+          mt={["150px", "0px", "0px", "0px"]}
           w="100%"
           h={["40%", "80%", "80%", "70%"]}
         >
