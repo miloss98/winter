@@ -1,5 +1,5 @@
 import { NativeBaseProvider, Center } from "native-base";
-import { Navbar, Home, About, Services } from "./components/index";
+import { Navbar, Home, About, Services, Pricing } from "./components/index";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Home />
         <About />
         <Services />
+        <Pricing />
       </Center>
     </NativeBaseProvider>
   );
