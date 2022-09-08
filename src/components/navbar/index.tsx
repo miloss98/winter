@@ -1,4 +1,4 @@
-import { useMediaQuery, HStack, Text, Link, Image } from "native-base";
+import { useMediaQuery, HStack, Link, Image } from "native-base";
 import { logo } from "../../assets/index";
 import { NavLinks, SidebarMenu } from "../index";
 

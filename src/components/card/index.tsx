@@ -1,4 +1,4 @@
-import { VStack, Center, Image, Text, HStack } from "native-base";
+import { VStack, Center, Image, Text } from "native-base";
 
 interface CardInterface {
   id: number;
