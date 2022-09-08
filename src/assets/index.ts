@@ -14,6 +14,12 @@ import design_icon from "./images/design_icon.png";
 import concept_icon from "./images/concept_icon.png";
 import system_icon from "./images/system_icon.png";
 import contact_bgr from "./images/contact_bgr.jpg";
+import location_icon from "./images/location_icon.png";
+import phone_icon from "./images/phone_icon.png";
+import mail_icon from "./images/mail_icon.png";
+import facebook_icon from "./images/facebook_icon.png";
+import twitter_icon from "./images/twitter_icon.png";
+import googleplus_icon from "./images/googleplus_icon.png";
 
 export {
   logo,
@@ -32,4 +38,10 @@ export {
   concept_icon,
   system_icon,
   contact_bgr,
+  location_icon,
+  phone_icon,
+  mail_icon,
+  facebook_icon,
+  twitter_icon,
+  googleplus_icon,
 };
