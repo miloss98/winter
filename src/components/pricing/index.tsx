@@ -23,8 +23,9 @@ export const Pricing = () => {
 
   return (
     <div id="pricing">
-      <Center mb="2rem" w="100%">
+      <Center mb={["2rem", "2rem", "2rem", "8rem"]} w="100%">
         <Container
+          mt={["2rem", "2rem", "2rem", "5rem"]}
           pt={["50px", "40px", "40px"]}
           bgColor="white"
           justifyContent="space-around"
@@ -49,7 +50,7 @@ export const Pricing = () => {
           </Text>
           <DividerLine />
         </Container>
-        <Box w="80%">
+        <Box mt="3rem" w="80%">
           <Packages pricesData={pricesData} />
         </Box>
       </Center>
