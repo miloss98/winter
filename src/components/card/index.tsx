@@ -19,7 +19,7 @@ export const Card = (props: CardProps) => {
             key={id}
             w={["100%", "22%", "22%", "22%"]}
             height={["100%", "90%", "90%", "90%"]}
-            marginTop={["20px", "0px", "0px", "0px"]}
+            mt={["30px", "0px", "0px", "0px"]}
           >
             <Center h="100%">
               <Image
