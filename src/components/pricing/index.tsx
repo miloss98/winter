@@ -1,8 +1,26 @@
 import { Center, Box, Container, Text, Heading } from "native-base";
+import { useEffect, useState } from "react";
 import { DividerLine } from "../divider";
 import { Packages } from "../packages";
+import { packagesData } from "../../data/packages";
+
+interface PricesInterface {
+  id: number;
+  name: string;
+  price: string;
+  bandwidth: string;
+  memory: string;
+  support: string;
+  update: string;
+}
 
 export const Pricing = () => {
+  const [pricesData, setPricesData] = useState<PricesInterface[]>([]);
+
+  useEffect(() => {
+    setPricesData(packagesData);
+  }, []);
+
   return (
     <div id="pricing">
       <Center w="100%">
@@ -32,7 +50,7 @@ export const Pricing = () => {
           <DividerLine />
         </Container>
         <Box w="80%">
-          <Packages />
+          <Packages pricesData={pricesData} />
         </Box>
       </Center>
     </div>
