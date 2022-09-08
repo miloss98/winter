@@ -1,5 +1,5 @@
 import logo from "./images/logo.png";
-import banner_bg from "./images/Banner-bg.jpg";
+import banner_bg from "./images/banner_bgr.jpg";
 import sliderimage1 from "./images/sliderimage1.jpg";
 import sliderimage2 from "./images/sliderimage2.jpg";
 import aboutimage1 from "./images/aboutimage1.jpg";
