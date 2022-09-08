@@ -91,6 +91,9 @@ export const Packages = (props: PackageInterface) => {
               _hover={{
                 bgColor: "gray.700",
               }}
+              _pressed={{
+                bgColor: "gray.500",
+              }}
             >
               Order now
             </Button>

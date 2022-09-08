@@ -23,7 +23,7 @@ export const Pricing = () => {
 
   return (
     <div id="pricing">
-      <Center w="100%">
+      <Center mb="2rem" w="100%">
         <Container
           pt={["50px", "40px", "40px"]}
           bgColor="white"
