@@ -1,13 +1,13 @@
 import { Center, Box, Container, Text, Heading } from "native-base";
 import { DividerLine } from "../divider";
+import { Packages } from "../packages";
 
 export const Pricing = () => {
   return (
     <div id="pricing">
-      <Center>
+      <Center w="100%">
         <Container
           pt={["50px", "40px", "40px"]}
-          h="35%"
           bgColor="white"
           justifyContent="space-around"
           alignItems="center"
@@ -31,6 +31,9 @@ export const Pricing = () => {
           </Text>
           <DividerLine />
         </Container>
+        <Box w="80%">
+          <Packages />
+        </Box>
       </Center>
     </div>
   );
