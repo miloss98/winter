@@ -8,6 +8,7 @@ export const Contact = () => {
       <Box
         mt={["3rem", "2rem", "0rem", "0rem"]}
         pb={["0rem", "0rem", "4rem", "3.2rem"]}
+        pt={["0rem", "0rem", "3rem", "5rem"]}
         w="100%"
         justifyContent="flex-start"
         alignItems="center"

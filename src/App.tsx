@@ -12,6 +12,7 @@ function App() {
         <Services />
         <Pricing />
         <Contact />
+        <Footer />
       </Center>
     </NativeBaseProvider>
   );

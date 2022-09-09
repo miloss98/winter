@@ -22,7 +22,6 @@ import phone_icon from "./images/phone_icon.png";
 import mail_icon from "./images/mail_icon.png";
 import facebook_icon from "./images/facebook_icon.png";
 import twitter_icon from "./images/twitter_icon.png";
-import googleplus_icon from "./images/googleplus_icon.png";
 
 export {
   logo,
@@ -49,5 +48,4 @@ export {
   mail_icon,
   facebook_icon,
   twitter_icon,
-  googleplus_icon,
 };

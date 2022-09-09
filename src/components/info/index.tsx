@@ -1,21 +1,19 @@
-import { Box, Heading, HStack, Text, Image } from "native-base";
+import { Box, Heading, HStack, Text, Image, Link } from "native-base";
 import {
   location_icon,
   phone_icon,
   mail_icon,
   facebook_icon,
   twitter_icon,
-  googleplus_icon,
 } from "../../assets/index";
 
 export const Info = () => {
   return (
     <Box my="2rem" w={["90%", "90%", "50%", "45%"]} h="300px">
-      <Heading size="xl" color="orange.500" pb="1rem">
+      <Heading size="xl" color="orange.500" pb="1rem" pl="0.2rem">
         Get in touch !
       </Heading>
       <HStack
-        pl={["0rem", "0rem", "0.3rem", "0.3rem"]}
         pb="1rem"
         w={["100%", "80%", "80%", "50%"]}
         justifyContent={[
@@ -33,13 +31,12 @@ export const Info = () => {
           width="30px"
           height="30px"
         />
-        <Text w="80%" fontSize="md" color="white">
+        <Text w="80%" fontSize={["sm", "sm", "md", "md"]} color="white">
           999, Lorem ipsum dolor sit.
         </Text>
       </HStack>
 
       <HStack
-        pl={["0rem", "0rem", "0.3rem", "0.3rem"]}
         pb="1rem"
         w={["100%", "80%", "70%", "50%"]}
         justifyContent={[
@@ -57,13 +54,12 @@ export const Info = () => {
           width="30px"
           height="30px"
         />
-        <Text w="80%" fontSize="sm" color="white">
+        <Text w="80%" fontSize={["sm", "sm", "md", "md"]} color="white">
           (+001) 001 002 0034
         </Text>
       </HStack>
 
       <HStack
-        pl={["0rem", "0rem", "0.3rem", "0.3rem"]}
         w={["100%", "80%", "70%", "50%"]}
         justifyContent={[
           "space-around",
@@ -80,41 +76,39 @@ export const Info = () => {
           width="30px"
           height="30px"
         />
-        <Text w="80%" fontSize="sm" color="white">
+        <Text w="80%" fontSize={["sm", "sm", "md", "md"]} color="white">
           test@mail.com
         </Text>
       </HStack>
 
-      <HStack
-        mt="2rem"
-        w="50%"
-        justifyContent="flex-start"
-        alignItems="center"
-        pl={["0rem", "0rem", "0.3rem", "0.3rem"]}
-      >
-        <Image
-          resizeMode="contain"
-          source={{ uri: facebook_icon }}
-          alt="Alternate Text"
-          width="40px"
-          height="40px"
-          mr="0.5rem"
-        />
-        <Image
-          resizeMode="contain"
-          source={{ uri: twitter_icon }}
-          alt="Alternate Text"
-          width="40px"
-          height="40px"
-          mr="0.5rem"
-        />
-        <Image
-          resizeMode="contain"
-          source={{ uri: googleplus_icon }}
-          alt="Alternate Text"
-          width="40px"
-          height="40px"
-        />
+      <HStack mt="2rem" w="50%" justifyContent="flex-start" alignItems="center">
+        <Text
+          pl={["0.5rem", "0.5rem", "0rem", "0rem"]}
+          pr="1rem"
+          fontSize={["md", "md", "lg", "xl"]}
+          color="orange.500]"
+        >
+          Social:
+        </Text>
+        <Link href="https://www.facebook.com" isExternal>
+          <Image
+            resizeMode="contain"
+            source={{ uri: facebook_icon }}
+            alt="Alternate Text"
+            width="30px"
+            height="30px"
+            mr="0.5rem"
+          />
+        </Link>
+        <Link href="https://www.twitter.com" isExternal>
+          <Image
+            resizeMode="contain"
+            source={{ uri: twitter_icon }}
+            alt="Alternate Text"
+            width="30px"
+            height="30px"
+          />
+        </Link>
       </HStack>
     </Box>
   );

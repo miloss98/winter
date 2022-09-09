@@ -13,12 +13,13 @@ export const Card = (props: CardProps) => {
           <VStack
             key={id}
             w={["100%", "22%", "22%", "22%"]}
-            height={["100%", "90%", "90%", "90%"]}
+            height={["300px", "300px", "400px", "400px"]}
             mt={["30px", "0px", "0px", "0px"]}
+            mb="2rem"
           >
-            <Center h="100%">
+            <Center h="100%" w="100%">
               <Image
-                resizeMode="contain"
+                resizeMode="cover"
                 source={{ uri: bgr_url }}
                 position="absolute"
                 alt="Alternate Text"
