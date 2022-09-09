@@ -44,10 +44,10 @@ export const Contact = () => {
         </Container>
 
         <Container
-          w={["100%", "100%"]}
+          w="100%"
           alignItems="center"
           justifyContent="space-evenly"
-          flexDirection="column"
+          flexDirection={["column", "column", "row", "row"]}
         >
           <Form />
           <Info />

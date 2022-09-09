@@ -1,7 +1,14 @@
 import { Button, Stack, Input, TextArea } from "native-base";
 export const Form = () => {
   return (
-    <Stack space={4} w="100%" h="300px" pt="1rem" mt="1rem" alignItems="center">
+    <Stack
+      space={4}
+      w={["100%", "100%", "50%", "45%"]}
+      h="300px"
+      pt={["1rem", "1rem", "0rem", "0rem"]}
+      mt="1rem"
+      alignItems="center"
+    >
       <Input
         bgColor="white"
         size={["md", "md", "lg", "lg"]}
