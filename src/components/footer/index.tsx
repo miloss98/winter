@@ -5,7 +5,7 @@ export const Footer = () => {
     <HStack h="80px" w="100%" bgColor="gray.800">
       <Center w="100%">
         <Text
-          w={["70%", "70%", "100%", "100%"]}
+          textAlign="center"
           bold
           fontSize={["xs", "xs", "sm", "sm"]}
           color="white"
