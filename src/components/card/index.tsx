@@ -2,12 +2,12 @@ import { VStack, Center, Image, Text } from "native-base";
 import { CardInterface } from "../../sections/services";
 
 interface CardProps {
-  cardData: CardInterface[];
+  cardsData: CardInterface[];
 }
 export const Card = (props: CardProps) => {
   return (
     <>
-      {props?.cardData.map((card) => {
+      {props?.cardsData.map((card) => {
         const { id, title, bgr_url, icon_url } = card;
         return (
           <VStack

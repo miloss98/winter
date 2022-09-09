@@ -1,5 +1,4 @@
 import { Box, Center, VStack, Text, Heading, HStack, Image } from "native-base";
-import { useEffect, useState } from "react";
 import { DividerLine, Card } from "../../components/index";
 import { servicesbg } from "./../../assets/index";
 import { cardsData } from "../../data/cards";
@@ -12,11 +11,6 @@ export interface CardInterface {
 }
 
 export const Services = () => {
-  const [cardData, setCardData] = useState<CardInterface[]>([]);
-
-  useEffect(() => {
-    setCardData(cardsData);
-  }, []);
   return (
     <div id="services">
       <Box
@@ -71,7 +65,7 @@ export const Services = () => {
             justifyContent="space-evenly"
             alignItems={["flex-start", "center", "center", "center"]}
           >
-            <Card cardData={cardData} />
+            <Card cardsData={cardsData} />
           </HStack>
         </Center>
       </Box>

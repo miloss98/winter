@@ -8,7 +8,7 @@ import {
   Center,
   Image,
 } from "native-base";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { aboutimage1, aboutimage2 } from "../../assets/index";
 import { Accordion, DividerLine } from "../../components/index";
 import { accordionsData, buttonsData } from "../../data/index";
@@ -24,20 +24,9 @@ interface ContentInterface {
   first: string;
   second: string;
 }
-interface ButtonInterface {
-  id: number;
-  title: string;
-}
 
 export const About = () => {
-  const [data, setData] = useState<AccordionInterface[]>([]);
-  const [btnData, setBtnData] = useState<ButtonInterface[]>();
   const [value, setValue] = useState<number>(0);
-
-  useEffect(() => {
-    setData(accordionsData);
-    setBtnData(buttonsData);
-  }, []);
 
   return (
     <div id="about">
@@ -88,7 +77,7 @@ export const About = () => {
           pt="60px"
         >
           <HStack w={["100%", "60%", "60%", "40%"]}>
-            {btnData?.map((button) => {
+            {buttonsData?.map((button) => {
               const { id, title } = button;
               return (
                 <Button
@@ -166,7 +155,7 @@ export const About = () => {
               </Center>
             </Box>
             {/* single accordion item */}
-            <Accordion data={data} value={value} />
+            <Accordion data={accordionsData} value={value} />
           </HStack>
         </Container>
       </Box>

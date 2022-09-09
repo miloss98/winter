@@ -2,12 +2,12 @@ import { VStack, Center, Button, Text, Heading } from "native-base";
 import { PricesInterface } from "../../sections/pricing";
 
 interface PackageInterface {
-  pricesData: PricesInterface[];
+  packagesData: PricesInterface[];
 }
 export const Packages = (props: PackageInterface) => {
   return (
     <>
-      {props?.pricesData.map((data) => {
+      {props?.packagesData.map((data) => {
         const { id, name, price, bandwidth, memory, support, update } = data;
         return (
           <VStack
