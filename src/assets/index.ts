@@ -2,6 +2,9 @@ import logo from "./images/logo.png";
 import banner_bg from "./images/banner_bgr.jpg";
 import sliderimage1 from "./images/sliderimage1.jpg";
 import sliderimage2 from "./images/sliderimage2.jpg";
+import sliderimage3 from "./images/sliderimage3.jpg";
+import sliderimage4 from "./images/sliderimage4.jpg";
+import sliderimage5 from "./images/sliderimage5.jpeg";
 import aboutimage1 from "./images/aboutimage1.jpg";
 import aboutimage2 from "./images/aboutimage2.jpg";
 import servicesbg from "./images/servicesbg.jpg";
@@ -26,6 +29,9 @@ export {
   banner_bg,
   sliderimage1,
   sliderimage2,
+  sliderimage3,
+  sliderimage4,
+  sliderimage5,
   aboutimage1,
   aboutimage2,
   servicesbg,

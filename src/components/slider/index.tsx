@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 //assets
-import { sliderimage1, sliderimage2 } from "../../assets";
+import { sliderImagesData } from "../../data/sliderImages";
 
 export const ImageSlider = () => {
   return (
@@ -20,24 +20,20 @@ export const ImageSlider = () => {
       slidesPerView={1}
       loop
     >
-      <SwiperSlide>
-        <Image
-          source={{ uri: sliderimage1 }}
-          position="absolute"
-          alt="Alternate Text"
-          width="100%"
-          height="100%"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          source={{ uri: sliderimage2 }}
-          position="absolute"
-          alt="Alternate Text"
-          width="100%"
-          height="100%"
-        />
-      </SwiperSlide>
+      {sliderImagesData.map((imageData) => {
+        const { id, url } = imageData;
+        return (
+          <SwiperSlide key={id}>
+            <Image
+              source={{ uri: url }}
+              position="absolute"
+              alt="Alternate Text"
+              width="100%"
+              height="100%"
+            />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
