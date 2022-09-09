@@ -5,7 +5,13 @@ import { contact_bgr } from "../../assets";
 export const Contact = () => {
   return (
     <div id="contact">
-      <Box w="100%" justifyContent="flex-start" alignItems="center">
+      <Box
+        mt={["3rem", "2rem", "0rem", "0rem"]}
+        pb={["0rem", "0rem", "4rem", "3.2rem"]}
+        w="100%"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
         <Image
           resizeMode="cover"
           source={{ uri: contact_bgr }}
