@@ -2,7 +2,7 @@ import { Image } from "native-base";
 import "../../index.css";
 //swiper library
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectFade } from "swiper";
+import { Navigation, EffectFade, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
@@ -13,10 +13,11 @@ export const ImageSlider = () => {
   return (
     <Swiper
       style={{ height: "100%", width: "100%" }}
-      modules={[Navigation, EffectFade]}
+      modules={[Navigation, EffectFade, Autoplay]}
       navigation
+      autoplay={{ delay: 2000 }}
       effect={"fade"}
-      speed={800}
+      speed={600}
       slidesPerView={1}
       loop
     >
