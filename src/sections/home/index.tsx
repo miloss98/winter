@@ -9,7 +9,7 @@ import {
   Heading,
 } from "native-base";
 import { banner_bg } from "../../assets/index";
-import { ImageSlider } from "../index";
+import { ImageSlider } from "../../components/index";
 
 export const Home = () => {
   return (

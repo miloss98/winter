@@ -10,7 +10,7 @@ import {
 } from "native-base";
 import { useState, useEffect } from "react";
 import { aboutimage1, aboutimage2 } from "../../assets/index";
-import { Accordion, DividerLine } from "./../index";
+import { Accordion, DividerLine } from "../../components/index";
 import { accordionsData, buttonsData } from "../../data/index";
 
 interface AccordionInterface {

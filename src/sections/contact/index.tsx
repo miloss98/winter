@@ -1,5 +1,5 @@
 import { Container, Box, Image, Text, Heading } from "native-base";
-import { DividerLine, Form, Info } from "../index";
+import { DividerLine, Form, Info } from "../../components/index";
 import { contact_bgr } from "../../assets";
 
 export const Contact = () => {

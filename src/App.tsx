@@ -1,12 +1,6 @@
 import { NativeBaseProvider, Center } from "native-base";
-import {
-  Navbar,
-  Home,
-  About,
-  Services,
-  Pricing,
-  Contact,
-} from "./components/index";
+import { Navbar, Footer } from "./components/index";
+import { Home, About, Services, Pricing, Contact } from "./sections/index";
 
 function App() {
   return (
