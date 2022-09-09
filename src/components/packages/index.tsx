@@ -1,14 +1,6 @@
 import { VStack, Center, Button, Text, Heading } from "native-base";
+import { PricesInterface } from "../../sections/pricing";
 
-interface PricesInterface {
-  id: number;
-  name: string;
-  price: string;
-  bandwidth: string;
-  memory: string;
-  support: string;
-  update: string;
-}
 interface PackageInterface {
   pricesData: PricesInterface[];
 }

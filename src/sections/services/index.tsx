@@ -4,14 +4,14 @@ import { DividerLine, Card } from "../../components/index";
 import { servicesbg } from "./../../assets/index";
 import { cardsData } from "../../data/cards";
 
-export const Services = () => {
-  interface CardInterface {
-    id: number;
-    title: string;
-    bgr_url: string;
-    icon_url: string;
-  }
+export interface CardInterface {
+  id: number;
+  title: string;
+  bgr_url: string;
+  icon_url: string;
+}
 
+export const Services = () => {
   const [cardData, setCardData] = useState<CardInterface[]>([]);
 
   useEffect(() => {

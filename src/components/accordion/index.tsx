@@ -1,18 +1,9 @@
 import { Box, Heading, Text } from "native-base";
+import { AccordionInterface } from "../../sections/about";
 
 interface Props {
   data: AccordionInterface[];
   value: number;
-}
-interface AccordionInterface {
-  id: number;
-  title: string;
-  heading: string;
-  content: ContentInterface;
-}
-interface ContentInterface {
-  first: string;
-  second: string;
 }
 
 export const Accordion = (props: Props) => {

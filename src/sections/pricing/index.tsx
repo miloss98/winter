@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { DividerLine, Packages } from "../../components/index";
 import { packagesData } from "../../data/index";
 
-interface PricesInterface {
+export interface PricesInterface {
   id: number;
   name: string;
   price: string;

@@ -13,7 +13,7 @@ import { aboutimage1, aboutimage2 } from "../../assets/index";
 import { Accordion, DividerLine } from "../../components/index";
 import { accordionsData, buttonsData } from "../../data/index";
 
-interface AccordionInterface {
+export interface AccordionInterface {
   id: number;
   title: string;
   heading: string;
@@ -24,7 +24,6 @@ interface ContentInterface {
   first: string;
   second: string;
 }
-
 interface ButtonInterface {
   id: number;
   title: string;

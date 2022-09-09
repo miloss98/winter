@@ -1,11 +1,6 @@
 import { VStack, Center, Image, Text } from "native-base";
+import { CardInterface } from "../../sections/services";
 
-interface CardInterface {
-  id: number;
-  title: string;
-  bgr_url: string;
-  icon_url: string;
-}
 interface CardProps {
   cardData: CardInterface[];
 }
