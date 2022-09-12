@@ -24,7 +24,7 @@ export const Navbar = () => {
             height="100%"
             width={["20%", "10%"]}
             textDecorationLine="none"
-            href="/"
+            href="#home"
             justifyContent="center"
             alignItems="center"
           >
@@ -52,7 +52,7 @@ export const Navbar = () => {
             height="100%"
             width="10%"
             textDecorationLine="none"
-            href="/"
+            href="#home"
             justifyContent="center"
             alignItems="center"
           >
