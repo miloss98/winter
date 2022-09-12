@@ -7,6 +7,7 @@ import {
   VStack,
   Button,
   Heading,
+  Link,
 } from "native-base";
 import { banner_bg } from "../../assets/index";
 import { ImageSlider } from "../../components/index";
@@ -83,14 +84,20 @@ export const Home = () => {
               borderRadius="none"
               mb={["5px", "2px", "5px", "5px"]}
               size={["sm", "sm", "md", "lg"]}
-              fontSize={["md", "sm", "md", "lg"]}
-              _text={{ color: "white" }}
               _hover={{
                 bgColor: "orange.500",
                 borderColor: "orange.500",
               }}
             >
-              Read more
+              <Link
+                isExternal
+                fontSize={["md", "sm", "md", "lg"]}
+                isUnderlined={false}
+                _text={{ color: "white" }}
+                href="https://en.wikipedia.org/wiki/Winter"
+              >
+                Read more
+              </Link>
             </Button>
           </VStack>
         </HStack>
