@@ -12,63 +12,63 @@ export interface CardInterface {
 
 export const Services = () => {
   return (
-    <div id="services">
-      <Box
-        mt={["0px", "200px", "80px", "80px"]}
-        w="100vw"
-        justifyContent="flex-start"
-      >
-        <Image
-          resizeMode="cover"
-          source={{ uri: servicesbg }}
-          position="absolute"
-          alt="Alternate Text"
-          width="100%"
-          height="100%"
-        />
-        <HStack w="100%" justifyContent="center" alignItems="center">
-          <VStack
-            pb={["50px", "0px", "0px", "0px"]}
-            w="100%"
-            justifyContent="center"
-            alignItems="center"
+    <Box
+      nativeID="services"
+      mt={["0px", "150px", "80px", "80px"]}
+      pt={["45px", "0px", "0px", "80px"]}
+      w="100vw"
+      justifyContent="flex-start"
+    >
+      <Image
+        resizeMode="cover"
+        source={{ uri: servicesbg }}
+        position="absolute"
+        alt="Alternate Text"
+        width="100%"
+        height="100%"
+      />
+      <HStack w="100%" justifyContent="center" alignItems="center">
+        <VStack
+          pb={["50px", "0px", "0px", "0px"]}
+          w="100%"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Heading
+            pb="1rem"
+            mt={["70px", "100px", "100px", "50px"]}
+            fontWeight="500"
+            fontSize={["2rem", "2rem", "2.2rem", "3rem"]}
+            textTransform="uppercase"
+            color="white"
           >
-            <Heading
-              pb="1rem"
-              mt={["70px", "100px", "100px", "50px"]}
-              fontWeight="500"
-              fontSize={["2rem", "2rem", "2.2rem", "3rem"]}
-              textTransform="uppercase"
-              color="white"
-            >
-              Our services
-            </Heading>
-            <Text
-              color="white"
-              width={["80%", "80%", "80%", "80%"]}
-              fontSize={["xs", "sm", "sm", "md"]}
-              textAlign="center"
-            >
-              Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor
-              a ornare odio. Sed non mauris vitae erat consequat auctor eu in
-              elit. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos.
-            </Text>
-            <DividerLine />
-          </VStack>
+            Our services
+          </Heading>
+          <Text
+            color="white"
+            width={["80%", "80%", "80%", "80%"]}
+            fontSize={["xs", "sm", "sm", "md"]}
+            textAlign="center"
+          >
+            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
+            ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos.
+          </Text>
+          <DividerLine />
+        </VStack>
+      </HStack>
+      <Center mt={["0px", "0px", "0px", "50px"]} w="100%">
+        <HStack
+          w="80%"
+          h={["45%", "80%", "80%", "80%"]}
+          flexDirection={["column", "row", "row", "row"]}
+          justifyContent="space-evenly"
+          alignItems={["flex-start", "center", "center", "center"]}
+        >
+          <Card cardsData={cardsData} />
         </HStack>
-        <Center mt={["0px", "0px", "0px", "50px"]} w="100%">
-          <HStack
-            w="80%"
-            h={["45%", "80%", "80%", "80%"]}
-            flexDirection={["column", "row", "row", "row"]}
-            justifyContent="space-evenly"
-            alignItems={["flex-start", "center", "center", "center"]}
-          >
-            <Card cardsData={cardsData} />
-          </HStack>
-        </Center>
-      </Box>
-    </div>
+      </Center>
+    </Box>
   );
 };
