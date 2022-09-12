@@ -1,7 +1,7 @@
 /* sidebar */
 .nav-menu {
   z-index: 9;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   margin-top: 50px;
   display: flex;

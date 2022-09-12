@@ -13,7 +13,7 @@ export const Navbar = () => {
         <HStack
           position="fixed"
           zIndex="9"
-          background="rgba(0,0,0,0.5)"
+          background="rgba(0,0,0,0.8)"
           justifyContent="space-between"
           alignItems="center"
           w="100%"
@@ -42,7 +42,7 @@ export const Navbar = () => {
         <HStack
           position="fixed"
           zIndex="9"
-          background="rgba(0,0,0,0.5)"
+          background="rgba(0,0,0,0.8)"
           justifyContent="space-around"
           alignItems="center"
           w="100%"
